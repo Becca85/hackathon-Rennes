@@ -175,18 +175,6 @@ textarea {
     font-family: 'Audiowide', cursive;
 }
 
-
-/* Second Wrap Background */
-
-.second-wrap {
-    height: 100%;
-    width: 100vw;
-    background: #ffffff url("../img/test-chat.jpg") no-repeat fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-attachment: fixed;
-}
-
 .section-present {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -452,22 +440,6 @@ option {
 a:hover {
     text-decoration: none;
 }
-
-
-/*gestion des logos partenaires
-
-.partenaire {
-    height: 50px;
-    background-color: white !important;
-}
-
-.partenaires {
-    background-color: white !important;
-}
-
-.invisible {
-    visibility: hidden;
-}*/
 
 footer {
     height: 75px;
