@@ -12,7 +12,7 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="icon" href="html-coding.svg">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
@@ -198,7 +198,7 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
