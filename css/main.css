@@ -304,7 +304,6 @@ textarea {
 
 /*formulaire de contact*/
 
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900);
 *:focus {
     outline: 0;
 }
@@ -313,7 +312,7 @@ textarea {
 /* Below is the design for the contact form */
 
 #contact-wrap {
-    font-family: 'Lato', calibri, arial;
+    font-family: 'Lato Light', calibri, arial;
     font-size: 16px;
     font-weight: 300;
     width: 100%;
@@ -334,7 +333,7 @@ textarea {
 #contact-area textarea {
     padding: 5px;
     width: 100%;
-    font-family: 'Lato', calibri, arial;
+    font-family: 'Lato Light', calibri, arial;
     color: whitesmoke;
     background-color: transparent;
     border-top: 1px solid transparent;
@@ -364,9 +363,8 @@ textarea {
 }
 
 #contact-area input.submit-button {
-    font-family: 'Lato', calibri, arial;
+    font-family: 'Lato Black', calibri, arial;
     font-size: 15px;
-    font-weight: 300;
     text-transform: uppercase;
     width: 100px;
     float: left;

@@ -14,9 +14,8 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,900' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -191,10 +190,7 @@
 </body>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')
-</script>
+<script src="js/vendor/jquery-1.11.3.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -218,7 +214,7 @@
     ga('send', 'pageview');
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.js-scrollTo').on('click', function () { // Au clic sur un élément
