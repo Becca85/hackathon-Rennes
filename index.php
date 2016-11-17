@@ -25,15 +25,25 @@
     include "config.php";
     $info_message = [];
     $error_message = [];
-
+    $tableau_result=[];
     // tableau compteur initialisé a 0
     $tabcompteur= array(
-        'Developpeur web' => 0,
-        'Big Data'=> 0,
+        'Developpeur' => 0,
         'Designer'=> 0,
-        'Referenciel metier'=>0
+        'Chef de projet'=> 0,
+        'Marketing / Communication'=>0
     );
-
+    try{//Connexion
+            $connexion= new PDO("mysql:host=$serveur;dbname=$database",$login,$pass);
+            $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            
+            $tableau_result = select($connexion);
+            compteur();
+    }
+    catch (PDOException $e){
+            $msg = 'Echec de la connexion : '.$e->getMessage();
+            array_push($error_message, $msg);
+    }
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Une inscription est en cours.
         $params = [];
@@ -47,8 +57,6 @@
         try{//Connexion
             $connexion= new PDO("mysql:host=$serveur;dbname=$database",$login,$pass);
             $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            
-            $tableau_result = select($connexion);
             $success = add($tableau_result,$connexion, $params);
             if($success){
                 $msg = "Vous êtes la ".(count($tableau_result)+1)."e personne inscrite";
@@ -106,7 +114,7 @@
                         }
 
                         if(!$trouve){
-                            compteur();
+                           
 
                             if ($tabmax[$metier]>$tabcompteur[$metier]){
                             $sql = "INSERT INTO Inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
@@ -117,6 +125,8 @@
                             $msg = "Votre inscription a bien été effectuée";
                             array_push($info_message, $msg);$success = true;
                             $success = true;
+                            $tableau_result = select($connexion);
+                            compteur();
                             }
 
                             else {
@@ -189,26 +199,26 @@
         <div class="col-md-12 block" id="anchor">
             <h2 class="col-md-12">{ Présentation }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <p class="col-md-12">Bienvenue à la première édition de ce Hackathon qui vous ai proposé par <a href="http://code-academie.fr/" target="_blank">la code académie</a>, <a href="https://www.printemps.com/magasins/rennes" target="_blank">printemps</a> et <a href="http://www.coworkinrennes.com/" target="_blank">le Loft</a>. Rejoignez-nous le temps d'un week-end pour exploiter les données que nous fournissent Printemps et innover concepts et applications à loisir! C'est un challenge multi-compétences qui fait la part belle au travail d'équipe, la communication et la créativité... Sans oublier une bonne dose de technique pour donner vie à vos projets. Le meilleur projet aura droit à une distinction et un cadeau mystère... A vos ordis, prêt ? Incrivez-vous!</p>
+            <p class="col-md-12">Bienvenue à la première édition de ce Hackathon qui vous est proposé par <a href="http://code-academie.fr/" target="_blank">la code académie</a>, <a href="https://www.printemps.com/magasins/rennes" target="_blank">printemps</a> et <a href="http://www.coworkinrennes.com/" target="_blank">le Loft</a>. Rejoignez-nous le temps d'un week-end pour exploiter les données que nous fournissent Printemps et innover des concepts et applications à loisir! C'est un challenge multi-compétences qui fait la part belle au travail d'équipe, la communication et la créativité... Sans oublier une bonne dose de technique pour donner vie à vos projets. Le meilleur projet aura droit à une distinction et un cadeau mystère... A vos ordis, prêt ? Incrivez-vous!</p>
         </div>
         <div class="col-md-12 block">
             <h2 class="col-md-12">{ Un hacka-quoi ? }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <p class="col-md-12">Le mot Hackathon est la combinaison de deux notions : hack et marathon. Un hack, en dépit de sa connotation négative initiale, est désormais le fait de détourner un objet/principe de son utilisation basique pour nous faciliter la vie (d'ailleurs on vous recommande fortement de faire un petit tour sur youtube et de chercher des <a href="https://www.youtube.com/watch?v=567Hkus_MVs" target="_blank">life hack</a>... ça pourrait vous changer la vie dans certaines occaison!). Dans notre cadre, c'est les données de printemps qui sont à hacker pour en tirer de nouvelles perspectives pour eux... ou le grand public. Vous n'êtes pas limiter dans la finalité de vos applications. La deuxième notion derrière le hackathon est le marathon. Vous allez devoir coder/designer/échanger/créer et surtout vous éclater pendant 48h non-stop! (sisi, vous avez le droit de dormir quand même). Le but est que vous fournissez le projet le plus aboutit dans un laps de temps très court et que vous le présentez devant un jury et les autres participants.</p>
+            <p class="col-md-12">Le mot Hackathon est la combinaison de deux notions : hack et marathon. Un hack, en dépit de sa connotation négative initiale, est désormais le fait de détourner un objet/principe de son utilisation basique pour nous faciliter la vie (d'ailleurs on vous recommande fortement de faire un petit tour sur youtube et de chercher des <a href="https://www.youtube.com/watch?v=567Hkus_MVs" target="_blank">life hack</a>... ça pourrait vous changer la vie dans certaines occaison!). Dans notre cadre, c'est les données de printemps qui sont à hacker pour en tirer de nouvelles perspectives pour eux... ou le grand public. Vous n'êtes pas limités dans la finalité de vos applications. La deuxième notion derrière le hackathon est le marathon. Vous allez devoir coder/designer/échanger/créer et surtout vous éclater pendant 48h non-stop! (sisi, vous avez le droit de dormir quand même). Le but est que vous fournissiez le projet le plus aboutit dans un laps de temps très court et que vous le présentiez devant un jury et les autres participants.</p>
         </div>
         <div class="col-md-12 block">
             <h2 class="col-md-12">{ Ok super, mais qui peut participer ? }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <p class="col-md-12">Ce challenge s'adresse à tous ceux qui souhaitent travailler en équipe sur l'élaboration d'un nouveau concept à partir de données réelles. Découvrez l'univers des start-up (ou partagez votre expérience) pendant cet événement, vous pouvez même pérenniser votre projet suite à ce week-end ou lui donner vie que le temps de ce week-end... Libre à vous d'en décider! Tous les profils sont les bienvenue, mais pour donner sa chance à tout le monde et pour des raisons de sécurité, nous allons restreindre le nombre de places en fonction de certains postes : 10 Développeurs, 6 Designers, 6 chef de projets, 6 Marketing/communication pour un total de 30 places. A cela se rajoutera les apprenants de la code académie pour un total de 20 places  Vous ne rentrez pas dans ces cases ? Envoyez-nous votre candidature à l'adresse <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a> et nous feront un retour (n'oubliez pas votre nom, prénom et domaine d'activité). Le public pourra venir à l'inauguration du projet ou à la cérémonie de remise des prix.</p>
+            <p class="col-md-12">Ce challenge s'adresse à tous ceux qui souhaitent travailler en équipe sur l'élaboration d'un nouveau concept à partir de données réelles. Découvrez l'univers des start-up (ou partagez votre expérience) pendant cet événement, vous pouvez même pérenniser votre projet suite à ce week-end ou lui donner vie que le temps de ce week-end... Libre à vous d'en décider! Tous les profils sont les bienvenus, mais pour donner sa chance à tout le monde et pour des raisons de sécurité, nous restreignons le nombre de places en fonction de certains postes : 12 Développeurs, 6 Designers, 6 chef de projets, 6 Marketing/communication pour un total de 30 places. A cela se rajoutera les apprenants de la code académie pour un total de 20 places  Vous ne rentrez pas dans ces cases ? Envoyez-nous votre candidature à l'adresse <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a> et nous ferons un retour (n'oubliez pas votre nom, prénom et domaine d'activité). Le public pourra venir à l'inauguration du projet ou à la cérémonie de remise des prix.</p>
 
-            <p class="col-md-12">Cloture des inscriptions le mercredi 7 Décembre</p>
+            <p class="col-md-12">Clôture des inscriptions le mercredi 7 Décembre</p>
 
-            <p class="col-md-12">Une participation de 25€ par participant sera demandé au début de l'événement. Cette participation nous aidera à couvrir les frais de l'événement et n'aura aucun but lucratif (c'est pour acheter les différents repas, un buffet de clotûre et du café... beaucoup de café). FACE Rennes contribue majoritairement aux coûts de l'événement.</p> 
+            <p class="col-md-12">Une participation de 25€ par participant sera demandée au début de l'événement. Cette participation nous aidera à couvrir les frais de l'événement et n'aura aucun but lucratif (c'est pour acheter les différents repas, un buffet de clôture et du café... beaucoup de café). FACE Rennes contribue majoritairement aux coûts de l'événement.</p> 
         </div>
         <div class="col-md-12 block">
             <h2 class="col-md-12">{ Et qui gère tout ça ? }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <p class="col-md-12"><a href="http://code-academie.fr/" target="_blank">La code académie</a> s'occupe de l'aspect logistique et de la communication sur l'événement. Qui sommes-nous ? nous sommes un centre de formation qui a pour but de former des demandeurs d'emplois au poste de développeur.euses web junior en 8 mois. C'est un projet porter par l'association FACE Rennes (Fondation Agir Contre l'Exclusion Rennes) avec le soutien des institutions publics comme Pôle emploi, la région ou le gouvernement. Nous en sommes à notre première promotion et cet événement a un double but pour nous : permettre à nos apprenants de se confronter au monde professionnel et nous faire connaitre. Cet événement n'aurai pas été possible sans la participation de Printemps qui nous fournit ses données et le Loft qui nous mettent à disposition leur locaux. Vous êtes une entreprise souhaitez participez à notre prochaine édition ou aider la code académie ? contactez-nous sur <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a>.</p>
+            <p class="col-md-12"><a href="http://code-academie.fr/" target="_blank">La code académie</a> s'occupe de l'aspect logistique et de la communication sur l'événement. Qui sommes-nous ? Nous sommes un centre de formation qui a pour but de former des demandeurs d'emplois au poste de développeur.euses web junior en 8 mois. C'est un projet porté par l'association FACE Rennes (Fondation Agir Contre l'Exclusion Rennes) avec le soutien des institutions publics comme Pôle emploi, la région ou le gouvernement. Nous en sommes à notre première promotion et cet événement a un double but pour nous : permettre à nos apprenants de se confronter au monde professionnel et nous faire connaître. Cet événement n'aurait pas été possible sans la participation de Printemps qui nous fournit ses données et le Loft qui nous mettent à disposition leur locaux. Vous êtes une entreprise souhaitez participez à notre prochaine édition ou aider la code académie ? contactez-nous sur <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a>.</p>
         </div>
     </section>
 
@@ -232,16 +242,16 @@
             <h2 class="col-md-12">{ planning } <small>JOURNÉE 1</small></h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
             <h3 class="col-md-12">9h00</h3>
-            <p class="col-md-12">Début de l'événement autour d'un petit déjeuner. Suite à ce petit déjeuner convivial, les équipes seront constitués et les données leurs seront distribués</p>
+            <p class="col-md-12">Début de l'événement autour d'un petit déjeuner. Suite à ce petit déjeuner convivial, les équipes seront constituées et les données leurs seront distribuées</p>
             <h3 class="col-md-12">10h00</h3>
-            <p class="col-md-12">Les équipes se lancent sur le projet. Les locaux seront ouvert 24h/24h pendant toute la durée de l'événement. Une permanence sera assuré par la code académie pour toute question éventuel.</p>
+            <p class="col-md-12">Les équipes se lancent sur le projet. Les locaux seront ouvert 24h/24h pendant toute la durée de l'événement. Une permanence sera assurée par la code académie pour toute question éventuelle.</p>
         </div>
         <div class="col-md-12 block">
             <h2 class="col-md-12">{ planning } <small>JOURNÉE 2</small></h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <h3 class="col-md-12">18h00</h3>
-            <p class="col-md-12">Présentation des projets par chaque équipe devant un jury et les autres participants. Délibération du jury et annonce du gagnant. Suite à cela, le banquet de clotûre commencera.</p>
-            <h3 class="col-md-12">20h00</h3>
+            <h3 class="col-md-12">17h00</h3>
+            <p class="col-md-12">Présentation des projets par chaque équipe devant un jury et les autres participants. Délibération du jury et annonce du gagnant. Suite à cela, le banquet de clôture commencera.</p>
+            <h3 class="col-md-12">19h00</h3>
             <p class="col-md-12">Clôture de l'événement, avec beaucoup de remerciements!</p>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12 block partenaire1">
@@ -286,12 +296,11 @@
                             <input type="text" name="email" id="email" placeholder="Email" />
 
                             <select name="metier" id="metier">
-                                <option value='Developpeur web'>Developpeur</option>
-                                <option value='Réferenciel métier'>Designer</option>
-                                <option value='Designer'>Chef de projet</option>
-                                <option value='Big Data'>Marketing/communication</option>
+                                <option value='Developpeur'>Developpeur</option>
+                                <option value='Designer'>Designer</option>
+                                <option value='Chef de projet'>Chef de projet</option>
+                                <option value='Marketing / Communication'>Marketing/communication</option>
                             </select>
-
                             <textarea name="message" rows="20" cols="20" id="message" placeholder="Message"></textarea>
 
                             <input type="submit" name="submit" value="ENVOYER" class="submit-button"/>
