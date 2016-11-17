@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Base styles: opinionated defaults
+   Base styles: opinionated defaults (vendors)
    ========================================================================== */
 
 html {
@@ -7,7 +7,6 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
-
 
 /*
  * Remove text-shadow in selection highlight:
@@ -56,47 +55,30 @@ textarea {
     padding: 0.2em 0;
 }
 
-
 /* ==========================================================================
-   LISE POIRIER - REBECCA MACCIO - RONALD MARCEL - LATIFA BOUMIZY
+   Here start out CSS
    ========================================================================== */
 
+/* Reseting bootstrap default proprietes */
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-
-/* SEPARATOR DIV */
-
-.line-separator {
-    display: block;
-    width: 50%;
-    height: 1px;
-    border-bottom: 1px solid grey;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.container-fluid {
+    padding:0;
 }
 
-.separator-present {
-    height: 1px;
-    background-color: #333;
-    width: 300px;
-    margin-bottom: 20px;
-    margin-left: 18px;
+a:hover {
+    text-decoration: none;
 }
 
+*:focus {
+    outline: 0;
+}
 
-/* First Wrap Background */
+/* Home section */
 
-.home_img {
+.home {
     height: 100vh;
     width: 100%;
-    background: url("../img/MG_2088.png");
-    background-size: cover;
-    background-position: bottom;
-    padding-top: 15%;
+    padding-top: 15%; /*for the text position*/
 }
 
 .home_content {
@@ -117,22 +99,21 @@ textarea {
     font-size: 15px;
 }
 
-.section-present {
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
 
-.block {
+/* CSS des articles */
+
+
+article {
     background-color: whitesmoke;
     color: #222;
 }
 
-.block:hover {
+article:hover {
     background-color: #222;
-    color: white;
+    color: whitesmoke;
 }
 
-.block h2 {
+article h2 {
     font-family: 'Audiowide', cursive;
     font-weight: 400;
     font-size: 1.1em;
@@ -140,59 +121,32 @@ textarea {
     text-transform: uppercase;
 }
 
-.block h3 {
+article h3 {
     font-size: 1.2em;
     text-transform: uppercase;
     margin-top: 0px;
 }
 
-.block p {
+article p {
     text-align: justify;
     margin-bottom: 30px;
 }
 
-.participant {
-    margin-bottom: 20px;
-    background-color: #222;
-    color: white;
-    text-align: center;
-    border: 1px solid whitesmoke;
-}
-
-.participant p {
-    color: white;
-    padding: 10px;
-    margin: 0px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.block img {
+article img {
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.partenaire1:hover {
+article.partenaire:hover {/* avoid negative form of logo*/
     background-color: whitesmoke;
     color: #222;
 }
 
 
-/* Third Wrap Background */
+/* Style des sections*/
 
-.third-wrap {
-    background: #ffffff url("../img/header.png") no-repeat fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-color: #222;
-    width: 100%;
-}
-
-.third-wrap h2 {
-    padding-left: 40px;
-    padding-right: 40px;
+.section_title {
+    padding : 0 40px 0 30px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: whitesmoke;
@@ -200,40 +154,37 @@ textarea {
     font-family: 'Audiowide', cursive;
 }
 
-.fourth-div {
-    display: table;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding-left: 30px;
+section {
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
-.six-wrap {
-    display: table;
-    height: 70vh;
-    background-color: transparent;
-    padding-left: 0px;
-    padding-right: 0px;
+.pres_line {
+    height: 1px;
+    background-color: #333;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: 18px;
 }
 
-.six-wrap h2 {
-    padding-left: 40px;
-    padding-right: 40px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: whitesmoke;
-    font-size: 15px;
-    font-family: 'Audiowide', cursive;
+.column {
+    margin-top: 2%;
 }
 
-.eight-div {
-    display: table;
-    height: 70vh;
-    background: #ffffff url("../img/clavier.jpg") no-repeat fixed;
-    background-color: transparent!;
-    background-size: cover;
-    background-position: 50% 50%;
+.line {
+    width: 50%;
+    height: 1px;
+    background-color: grey;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.adptmap {
+.contact {
+    height: 100vh;
+}
+
+.map {
     display: block;
     margin: 0 auto;
     margin-top: 50px;
@@ -243,12 +194,47 @@ textarea {
     margin-bottom: 100px;
 }
 
-
-/*formulaire de contact*/
-
-*:focus {
-    outline: 0;
+footer {
+    height: 75px;
+    width: 100%;
+    background-color: #222;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    text-transform: uppercase;
 }
+
+footer p {
+    margin-bottom: 0px;
+}
+
+
+
+/* backgrounds */
+
+.background {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #222;
+    width: 100%;
+}
+
+.background_home {
+    background-image: url("../img/MG_2088.png");
+}
+
+.background_pres {
+    background-image: url("../img/presentation.png");
+}
+
+.background_lieux {
+    background-image: url("../img/clavier.jpg");
+}
+
 
 
 /* Below is the design for the contact form */
@@ -358,7 +344,6 @@ select {
     font-size: 15px;
     font-weight: 600;
     color: #8E8E8F;
-    ;
     background-color: transparent;
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
@@ -373,115 +358,6 @@ option {
     margin-bottom: 10px;
     background-color: transparent;
 }
-
-
-/* pour enlever le trait sous te texte en hover*/
-
-a:hover {
-    text-decoration: none;
-}
-
-footer {
-    height: 75px;
-    width: 100%;
-    background-color: #222;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: whitesmoke;
-    text-transform: uppercase;
-}
-
-footer p {
-    margin-bottom: 0px;
-}
-
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #222 !important;
-        /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: none;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-    a[href^=""]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    img {
-        max-width: 100% !important;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
 
 /* ##################################################################### */
 
@@ -500,7 +376,7 @@ footer p {
         padding-left: 0px;
     }
     
-    .separator-present {
+    .pres_underline {
         display: none;
     }
     

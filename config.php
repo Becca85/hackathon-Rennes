@@ -1,7 +1,7 @@
 <?php
 
     $serveur="localhost";
-    $login="trainer";
+    $login="root";
     $pass="facesimplon2016";
     $database = "hackathon";
 
