@@ -180,16 +180,32 @@ section {
     margin-bottom: 20px;
 }
 
+.participant {
+    margin-bottom: 20px;
+    background-color: #222;
+    text-align: center;
+    border: 1px solid whitesmoke;
+}
+
+.participant p {
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
 .contact {
     height: 100vh;
 }
 
 .map {
     display: block;
-    margin: 0 auto;
+    margin: 2% auto;
     margin-top: 50px;
     width: 75%;
-    filter: saturate(0);
+    /*filter: saturate(1);*/
     opacity: 0.9;
     margin-bottom: 100px;
 }
@@ -210,11 +226,10 @@ footer p {
     margin-bottom: 0px;
 }
 
-
-
 /* backgrounds */
 
 .background {
+    width: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -237,80 +252,59 @@ footer p {
 
 
 
-/* Below is the design for the contact form */
+/* The code below is the design for the contact form */
 
-#contact-wrap {
-    font-family: 'Lato Light', calibri, arial;
-    font-size: 16px;
-    font-weight: 300;
+.contact-area {
+    padding-top: 5%;
     width: 100%;
+    margin: 0 auto;
+
     color: #fff;
-    overflow: auto;
-    float: left;
-    margin: 0 auto;
+    font-family: 'Lato Light', calibri, arial;
+    font-size: 15px;
+    font-weight: 300;  
 }
 
-#contact-area {
-    margin-left: 3px;
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-#contact-area input,
-#contact-area textarea {
+.contact-area input,
+.contact-area select,
+.contact-area textarea {
     padding: 5px;
     width: 100%;
-    font-family: 'Lato Light', calibri, arial;
-    color: whitesmoke;
     background-color: transparent;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid transparent;
-    margin-bottom: 15px;
+    border-style : solid transparent;
+    border-width: 0 0 1px 0;
+    margin-bottom: 1.5%;
+
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
 }
 
-#contact-area textarea {
+.contact-area textarea {
     height: 150px;
-    background-color: transparent;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid transparent;
 }
 
-#contact-area textarea:focus,
-#contact-area input:focus {
+.contact-area textarea:focus,
+.contact-area input:focus {
     background-color: whitesmoke;
     color: #222;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid transparent;
 }
 
-#contact-area input.submit-button {
-    font-family: 'Lato Black', calibri, arial;
-    font-size: 15px;
+.contact-area input.submit-button {
     text-transform: uppercase;
-    width: 100px;
-    float: left;
+    height: 5%;
+    margin-top: 1%;
+    color: whitesmoke;
+   
     background-color: transparent;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
-    -moz-transition: all 0.1s ease-in-out;
-    -webkit-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-    float: right;
+    border : 1px solid #fff;
+
     font-weight: bold;
 }
 
-#contact-area input.submit-button:hover {
+.contact-area input.submit-button:hover {
     color: #222;
     background-color: whitesmoke;
 }
@@ -338,35 +332,16 @@ footer p {
 }
 
 select {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 100%;
-    font-size: 15px;
     font-weight: 600;
     color: #8E8E8F;
-    background-color: transparent;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid transparent;
-    margin-bottom: 15px;
 }
 
 option {
-    background-color: #333;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: transparent;
+    background-color: #fff;
 }
 
-/* ##################################################################### */
 
-
-/* ############################   TABLETS   ############################ */
-
-
-/* ##################################################################### */
-
+/* ############################   RESPONSIVE   ######################### */
 
 /* Small devices (tablets, 768px and up) */
 
@@ -376,7 +351,7 @@ option {
         padding-left: 0px;
     }
     
-    .pres_underline {
+    /*.pres_line {
         display: none;
     }
     
@@ -385,68 +360,46 @@ option {
         margin-bottom: 0px;
     }
     
-    .block h2 {
+    article h2 {
         margin-top: 0px;
-        padding-top: 40px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 10px;
+        padding-top: 40px 40px 10px 40px;
     }
     
-    .section-present p {
-        padding-left: 40px;
-        padding-right: 40px;
+    article p {
+        padding: 0 40px;
         margin-bottom: 0px;
     }
     
-    .section-present h3 {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 20px;
+    article h3 {
+        padding: 20px 40px 0 40px;
         margin-bottom: 5px;
     }
     
-    .block {
-        margin-top: 0px;
-        margin-bottom: 0px;
+    article {
+        margin: 0;
         padding-bottom: 40px;
     }
     
     .participant {
         width: 50%;
-        margin: 0 auto;
-        margin-top: 10px;
+        margin: 10px auto;
     }
     
     .participant p {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 0 10px;
     }
     
     .partenaire {
-    padding-left: 25px !important;
-    padding-right: 25px !important;
-}
-    
-    .fourth-div {
-        width: 100%;
+        padding: 0 25px;
     }
     
-    .six-wrap {
-        width: 100%;
-    }
-    
-    .eight-div {
-        width: 100%;
-    }
-    
-     .adptmap {
+    .map {
         display: block;
         margin: 0 auto;
         width: 85%;
         margin-top: 30px;
-         height: 300px;
-         padding-bottom: 50px;
+        height: 300px;
+        padding-bottom: 50px;
     }
     
     iframe {
@@ -461,5 +414,5 @@ option {
         padding-left: 40px;
         padding-right: 40px;
         text-align: center;
-    }
+    }*/
 }

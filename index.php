@@ -206,17 +206,17 @@
 
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Présentation }</h2>
-                <div class="pres_line col-md-8 col-md-offset-1 center-block"></div>
+                <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <p class="col-md-12">Bienvenue à la première édition de ce Hackathon qui vous est proposé par <a href="http://code-academie.fr/" target="_blank">la code académie</a>, <a href="https://www.printemps.com/magasins/rennes" target="_blank">printemps</a> et <a href="http://www.coworkinrennes.com/" target="_blank">le Loft</a>. Rejoignez-nous le temps d'un week-end pour exploiter les données que nous fournissent Printemps et innover des concepts et applications à loisir! C'est un challenge multi-compétences qui fait la part belle au travail d'équipe, la communication et la créativité... Sans oublier une bonne dose de technique pour donner vie à vos projets. Le meilleur projet aura droit à une distinction et un cadeau mystère... A vos ordis, prêt ? Incrivez-vous!</p>
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Un hacka-quoi ? }</h2>
-                <div class="pres_line col-md-8 col-md-offset-1 center-block"></div>
+                <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <p class="col-md-12">Le mot Hackathon est la combinaison de deux notions : hack et marathon. Un hack, en dépit de sa connotation négative initiale, est désormais le fait de détourner un objet/principe de son utilisation basique pour nous faciliter la vie (d'ailleurs on vous recommande fortement de faire un petit tour sur youtube et de chercher des <a href="https://www.youtube.com/watch?v=567Hkus_MVs" target="_blank">life hack</a>... ça pourrait vous changer la vie dans certaines occaison!). Dans notre cadre, c'est les données de printemps qui sont à hacker pour en tirer de nouvelles perspectives pour eux... ou le grand public. Vous n'êtes pas limités dans la finalité de vos applications. La deuxième notion derrière le hackathon est le marathon. Vous allez devoir coder/designer/échanger/créer et surtout vous éclater pendant 48h non-stop! (sisi, vous avez le droit de dormir quand même). Le but est que vous fournissiez le projet le plus aboutit dans un laps de temps très court et que vous le présentiez devant un jury et les autres participants.</p>
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Ok super, mais qui peut participer ? }</h2>
-                <div class="pres_line col-md-8 col-md-offset-1 center-block"></div>
+                <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <p class="col-md-12">Ce challenge s'adresse à tous ceux qui souhaitent travailler en équipe sur l'élaboration d'un nouveau concept à partir de données réelles. Découvrez l'univers des start-up (ou partagez votre expérience) pendant cet événement, vous pouvez même pérenniser votre projet suite à ce week-end ou lui donner vie que le temps de ce week-end... Libre à vous d'en décider! Tous les profils sont les bienvenus, mais pour donner sa chance à tout le monde et pour des raisons de sécurité, nous restreignons le nombre de places en fonction de certains postes : 12 Développeurs, 6 Designers, 6 chef de projets, 6 Marketing/communication pour un total de 30 places. A cela se rajoutera les apprenants de la code académie pour un total de 20 places  Vous ne rentrez pas dans ces cases ? Envoyez-nous votre candidature à l'adresse <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a> et nous ferons un retour (n'oubliez pas votre nom, prénom et domaine d'activité). Le public pourra venir à l'inauguration du projet ou à la cérémonie de remise des prix.</p>
 
                 <p class="col-md-12">Clôture des inscriptions le mercredi 7 Décembre</p>
@@ -225,7 +225,7 @@
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Et qui gère tout ça ? }</h2>
-                <div class="pres_line col-md-8 col-md-offset-1 center-block"></div>
+                <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <p class="col-md-12"><a href="http://code-academie.fr/" target="_blank">La code académie</a> s'occupe de l'aspect logistique et de la communication sur l'événement. Qui sommes-nous ? Nous sommes un centre de formation qui a pour but de former des demandeurs d'emplois au poste de développeur.euses web junior en 8 mois. C'est un projet porté par l'association FACE Rennes (Fondation Agir Contre l'Exclusion Rennes) avec le soutien des institutions publics comme Pôle emploi, la région ou le gouvernement. Nous en sommes à notre première promotion et cet événement a un double but pour nous : permettre à nos apprenants de se confronter au monde professionnel et nous faire connaître. Cet événement n'aurait pas été possible sans la participation de Printemps qui nous fournit ses données et le Loft qui nous mettent à disposition leur locaux. Vous êtes une entreprise souhaitez participez à notre prochaine édition ou aider la code académie ? contactez-nous sur <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a>.</p>
             </article>
 
@@ -235,7 +235,7 @@
         <div class="col-md-5 column">
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Nombre de places disponibles : <?= array_sum($tabmax)-  array_sum($tabcompteur); ?> }</h2>
-                <div class="pres_line col-md-8 col-md-offset-1 center-block"></div>
+                <div class="pres_line col-md-8 col-md-offset-1 "></div>
                 <?php
                     foreach ($tabcompteur as $key => $value) {
                         echo "<div class='col-md-10 col-md-offset-1 participant'>";
@@ -248,7 +248,7 @@
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ planning } <small>JOURNÉE 1</small></h2>
-                <div class="pres_line col-md-8 col-md-offset-1 center-block"></div>
+                <div class="pres_line col-md-8 col-md-offset-1 "></div>
                 <h3 class="col-md-12">9h00</h3>
                 <p class="col-md-12">Début de l'événement autour d'un petit déjeuner. Suite à ce petit déjeuner convivial, les équipes seront constituées et les données leurs seront distribuées</p>
                 <h3 class="col-md-12">10h00</h3>
@@ -256,7 +256,7 @@
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ planning } <small>JOURNÉE 2</small></h2>
-                <div class="pres_line col-md-8 col-md-offset-1 center-block"></div>
+                <div class="pres_line col-md-8 col-md-offset-1 "></div>
                 <h3 class="col-md-12">17h00</h3>
                 <p class="col-md-12">Présentation des projets par chaque équipe devant un jury et les autres participants. Délibération du jury et annonce du gagnant. Suite à cela, le banquet de clôture commencera.</p>
                 <h3 class="col-md-12">19h00</h3>
@@ -264,7 +264,7 @@
             </article>
             <article class="col-md-12 col-sm-12 col-xs-12 partenaire">
                 <h2 class="col-md-12">{ Partenaires }</h2>
-                <div class="pres_line col-md-8 col-md-offset-1 center-block"></div>
+                <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
                     <img class="col-md-12 col-sm-5 col-sm-offset-1 img-responsive" src="img/face.png" alt="Association FACE RENNES">
                     <img class="col-md-10 col-sm-5 col-sm-offset-1 img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
@@ -292,7 +292,7 @@
         </div>
 
         <div class="col-md-10 col-md-offset-1">
-            <div id="contact-area">
+            <div class="contact-area">
                 <form method="post" action="index.php">
                     <input type="text" name="nom" id="nom" placeholder="Nom" />
                     <input type="text" name="prenom" id="prenom" placeholder="Prénom" />
