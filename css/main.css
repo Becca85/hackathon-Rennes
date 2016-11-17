@@ -26,19 +26,6 @@ html {
 }
 
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -46,26 +33,10 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
 iframe,
-img,
-svg,
-video {
+img {
     vertical-align: middle;
 }
-
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
 
 /*
  * Allow only vertical resizing of textareas.
@@ -104,19 +75,7 @@ textarea {
     display: block;
     width: 50%;
     height: 1px;
-    text-align: center;
     border-bottom: 1px solid grey;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.line-separator2 {
-    display: block;
-    width: 50%;
-    height: 1px;
-    text-align: center;
-    border-bottom: 1px solid whitesmoke;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -133,7 +92,7 @@ textarea {
 
 /* First Wrap Background */
 
-.first-wrap {
+.home_img {
     height: 100%;
     width: 100%;
     background: url("../img/MG_2088.png");

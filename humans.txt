@@ -3,11 +3,18 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Rebecca MACCIO  -   as Back End Developper 
+    Ronald MARCEL  -    as Back End Developper 
+    Lise POIRIER    -   as Front End Developper
+    Latifa BOUMIZY  -   as Front End Developper
 
 # THANKS
 
-    <name>
+Special thanks to all active members of the organizing hackthon team!
+
+#CONTACTS
+
+For any questions, please contact us as codeacademie@fondationface.org
 
 # TECHNOLOGY COLOPHON
 
