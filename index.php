@@ -30,8 +30,8 @@
             <div class="first-inner-div">
                 <a href="#anchor" class="js-scrollTo">
                     <h1 class="info">HACKATON CODE ACADEMIE</h1>
-                    <h1 class="info">Les 26 et 27 novembre</h1>
-                    <h1 class="info">Au 23 rue de l'Aiguillon</h1>
+                    <h1 class="info">Le 10-11 Décembre 2016</h1>
+                    <h1 class="info">Au Loft, 3 Rue de Robien, Rennes</h1>
                 </a>
             </div>
         </div>
@@ -41,24 +41,26 @@
     <!-- Colonne de présentation de l'hackaton -->
     <section class="col-md-5 col-md-offset-1 section-present" id="anchor">
         <div class="col-md-12 block" id="anchor">
-            <h2 class="col-md-12">{ Présentation ? }</h2>
+            <h2 class="col-md-12">{ Présentation }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum, elit ac rhoncus ornare, elit dui mollis risus, id rutrum massa erat vel neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis imperdiet rutrum. Etiam sit amet erat odio. Quisque non dui eget tortor finibus facilisis. Proin facilisis eros lectus, ac aliquam justo dapibus non. Nunc porta urna et eros finibus rutrum. Donec blandit commodo accumsan. Morbi at mi a mi ornare ullamcorper non id metus. Aliquam pharetra arcu in tortor pulvinar hendrerit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ex maiores totam nostrum cupiditate itaque! Cum, explicabo, exercitationem optio dignissimos aperiam placeat nemo, asperiores ea, provident earum vero quas neque.</p>
+            <p class="col-md-12">Bienvenue à la première édition de ce Hackathon qui vous ai proposé par <a href="http://code-academie.fr/" target="_blank">la code académie</a>, <a href="https://www.printemps.com/magasins/rennes" target="_blank">printemps</a> et <a href="http://www.coworkinrennes.com/" target="_blank">le Loft</a>. Rejoignez-nous le temps d'un week-end pour exploiter les données que nous fournissent Printemps et innover concepts et applications à loisir! C'est un challenge multi-compétences qui fait la part belle au travail d'équipe, la communication et la créativité... Sans oublier une bonne dose de technique pour donner vie à vos projets. Le meilleur projet aura droit à une distinction et un cadeau mystère... A vos ordis, prêt ? Incrivez-vous!</p>
         </div>
         <div class="col-md-12 block">
-            <h2 class="col-md-12">{ Pour qui ? }</h2>
+            <h2 class="col-md-12">{ Un hacka-quoi ? }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum, elit ac rhoncus ornare, elit dui mollis risus, id rutrum massa erat vel neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis imperdiet rutrum. Etiam sit amet erat odio. Quisque non dui eget tortor finibus facilisis. Proin facilisis eros lectus, ac aliquam justo dapibus non. Nunc porta urna et eros finibus rutrum. Donec blandit commodo accumsan. Morbi at mi a mi ornare ullamcorper non id metus. Aliquam pharetra arcu in tortor pulvinar hendrerit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis expedita ipsum facilis neque at omnis. Voluptatem earum eligendi rerum placeat, fugiat labore, perspiciatis doloremque animi veritatis sapiente voluptate voluptatum, et.</p>
+            <p class="col-md-12">Le mot Hackathon est la combinaison de deux notions : hack et marathon. Un hack, en dépit de sa connotation négative initiale, est désormais le fait de détourner un objet/principe de son utilisation basique pour nous faciliter la vie (d'ailleurs on vous recommande fortement de faire un petit tour sur youtube et de chercher des <a href="https://www.youtube.com/watch?v=567Hkus_MVs" target="_blank">life hack</a>... ça pourrait vous changer la vie dans certaines occaison!). Dans notre cadre, c'est les données de printemps qui sont à hacker pour en tirer de nouvelles perspectives pour eux... ou le grand public. Vous n'êtes pas limiter dans la finalité de vos applications. La deuxième notion derrière le hackathon est le marathon. Vous allez devoir coder/designer/échanger/créer et surtout vous éclater pendant 48h non-stop! (sisi, vous avez le droit de dormir quand même). Le but est que vous fournissez le projet le plus aboutit dans un laps de temps très court et que vous le présentez devant un jury et les autres participants.</p>
         </div>
         <div class="col-md-12 block">
-            <h2 class="col-md-12">{ C'est quoi ? }</h2>
+            <h2 class="col-md-12">{ Ok super, mais qui peut participer ? }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum, elit ac rhoncus ornare, elit dui mollis risus, id rutrum massa erat vel neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis imperdiet rutrum. Etiam sit amet erat odio. Quisque non dui eget tortor finibus facilisis. Proin facilisis eros lectus, ac aliquam justo dapibus non. Nunc porta urna et eros finibus rutrum. Donec blandit commodo accumsan. Morbi at mi a mi ornare ullamcorper non id metus. Aliquam pharetra arcu in tortor pulvinar hendrerit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt atque, incidunt sit a quasi aspernatur corrupti aut saepe laudantium ex, possimus culpa soluta eum laboriosam laborum autem veniam totam dicta.</p>
+            <p class="col-md-12">Ce challenge s'adresse à tous ceux qui souhaitent travailler en équipe sur l'élaboration d'un nouveau concept à partir de données réelles. Découvrez l'univers des start-up (ou partagez votre expérience) pendant cet événement, vous pouvez même pérenniser votre projet suite à ce week-end ou lui donner vie que le temps de ce week-end... Libre à vous d'en décider! Tous les profils sont les bienvenue, mais pour donner sa chance à tout le monde et pour des raisons de sécurité, nous allons restreindre le nombre de places en fonction de certains postes : 10 Développeurs, 6 Designers, 6 chef de projets, 6 Marketing/communication pour un total de 30 places. A cela se rajoutera les apprenants de la code académie pour un total de 20 places  Vous ne rentrez pas dans ces cases ? Envoyez-nous votre candidature à l'adresse <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a> et nous feront un retour (n'oubliez pas votre nom, prénom et domaine d'activité). Le public pourra venir à l'inauguration du projet ou à la cérémonie de remise des prix.</p>
+
+            <p class="col-md-12">Une participation de 25€ par participant sera demandé au début de l'événement. Cette participation nous aidera à couvrir les frais de l'événement et n'aura aucun but lucratif (c'est pour acheter les différents repas, un buffet de clotûre et du café... beaucoup de café). FACE Rennes contribue majoritairement aux coûts de l'événement.</p> 
         </div>
         <div class="col-md-12 block">
-            <h2 class="col-md-12">{ Comment ? }</h2>
+            <h2 class="col-md-12">{ Et qui gère tout ça ? }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
-            <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum, elit ac rhoncus ornare, elit dui mollis risus, id rutrum massa erat vel neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis imperdiet rutrum. Etiam sit amet erat odio. Quisque non dui eget tortor finibus facilisis. Proin facilisis eros lectus, ac aliquam justo dapibus non. Nunc porta urna et eros finibus rutrum. Donec blandit commodo accumsan. Morbi at mi a mi ornare ullamcorper non id metus. Aliquam pharetra arcu in tortor pulvinar hendrerit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, maiores, quidem. Ullam nulla, modi explicabo. Rerum nesciunt dolorum facere, possimus officiis aliquam asperiores ipsam impedit obcaecati. Excepturi voluptatem, in facilis!</p>
+            <p class="col-md-12"><a href="http://code-academie.fr/" target="_blank">La code académie</a> s'occupe de l'aspect logistique et de la communication sur l'événement. Qui sommes-nous ? nous sommes un centre de formation qui a pour but de former des demandeurs d'emplois au poste de développeur.euses web junior en 8 mois. C'est un projet porter par l'association FACE Rennes (Fondation Agir Contre l'Exclusion Rennes) avec le soutien des institutions publics comme Pôle emploi, la région ou le gouvernement. Nous en sommes à notre première promotion et cet événement a un double but pour nous : permettre à nos apprenants de se confronter au monde professionnel et nous faire connaitre. Cet événement n'aurai pas été possible sans la participation de Printemps qui nous fournit ses données et le Loft qui nous mettent à disposition leur locaux. Vous êtes une entreprise souhaitez participez à notre prochaine édition ou aider la code académie ? contactez-nous sur <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a>.</p>
         </div>
     </section>
 
@@ -66,19 +68,19 @@
     <!-- Colonne du nombre de participant et du planning -->
     <section class="col-md-5 section-present">
         <div class="col-md-12 block">
-            <h2 class="col-md-12">{ Nombre de participant attendus, 40 ? }</h2>
+            <h2 class="col-md-12">{ Nombre de places disponibles : [ 30 - count_inscrit] }</h2>
             <div class="separator-present col-md-8 col-md-offset-1 center-block"></div>
             <div class="col-md-10 col-md-offset-1 participant">
-                <p class="col-md-12">0 - dev back</p>
+                <p class="col-md-12">[10 - count_dev] - Développeurs</p>
             </div>
             <div class="col-md-10 col-md-offset-1 participant">
-                <p class="col-md-12">0 - Big data</p>
+                <p class="col-md-12">[6 - count_designer] - Designers</p>
             </div>
             <div class="col-md-10 col-md-offset-1 participant">
-                <p class="col-md-12">0 - Designer</p>
+                <p class="col-md-12">[6 - count_chef] - Chef de projet</p>
             </div>
             <div class="col-md-10 col-md-offset-1 participant">
-                <p class="col-md-12">0 - Ref métiers</p>
+                <p class="col-md-12">[6 - count_com] - Communication/Marketing</p>
             </div>
         </div>
         <div class="col-md-12 block">
@@ -137,10 +139,10 @@
                             <input type="text" name="email" id="email" placeholder="Email" />
 
                             <select name="metier" id="metier">
-                                <option value='Developpeur web'>Developpeur web</option>
-                                <option value='Réferenciel métier'>Réferentiel métier </option>
-                                <option value='Designer'>Designer</option>
-                                <option value='Big Data'>Big Data</option>
+                                <option value='Developpeur web'>Developpeur</option>
+                                <option value='Réferenciel métier'>Designer</option>
+                                <option value='Designer'>Chef de projet</option>
+                                <option value='Big Data'>Marketing/communication</option>
                             </select>
 
                             <textarea name="message" rows="20" cols="20" id="message" placeholder="Message"></textarea>
