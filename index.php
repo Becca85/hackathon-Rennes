@@ -176,14 +176,10 @@
         <![endif]-->
 
     <div class="home_img">
-        <div class="first-div">
-            <div class="first-inner-div">
-                <a href="#anchor" class="js-scrollTo">
-                    <h1 class="info">HACKATON CODE ACADEMIE</h1>
-                    <h1 class="info">Le 10-11 Décembre 2016</h1>
-                    <h1 class="info">Au Loft, 3 Rue de Robien, Rennes</h1>
-                </a>
-            </div>
+        <div class="home_content">
+                <h1 class="info">HACKATON CODE ACADEMIE</h1>
+                <h1 class="info">Le 10-11 Décembre 2016</h1>
+                <h1 class="info">Au Loft, 3 Rue de Robien, Rennes</h1>
         </div>
     </div>
 
