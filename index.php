@@ -186,7 +186,7 @@
         <![endif]-->
 
     <header class="home background background_home">
-        <div class="home_content">
+        <div class="home_container">
             <h1 class="info">HACKATON CODE ACADEMIE</h1>
             <h1 class="info">Le 10-11 Décembre 2016</h1>
             <h1 class="info">Au Loft, 3 Rue de Robien, Rennes</h1>
@@ -262,7 +262,7 @@
                 <h3 class="col-md-12">19h00</h3>
                 <p class="col-md-12">Clôture de l'événement, avec beaucoup de remerciements!</p>
             </article>
-            <article class="col-md-12 col-sm-12 col-xs-12 partenaire">
+            <article class="col-md-12 partenaire">
                 <h2 class="col-md-12">{ Partenaires }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <div class="col-md-6 col-xs-6 col-sm-6">

@@ -81,7 +81,7 @@ a:hover {
     padding-top: 15%; /*for the text position*/
 }
 
-.home_content {
+.home_container {
     margin: auto;
     width: 41%;
     height: 40%;
@@ -89,14 +89,15 @@ a:hover {
     color: #fff;
 }
 
-.home_content h1 {
+.home_container h1 {
     margin-top:0;
     padding: 20px 40px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.9);
     font-family: 'Audiowide', cursive;
-    font-size: 15px;
+    font-size: 1em;
 }
 
 
@@ -130,6 +131,7 @@ article h3 {
 article p {
     text-align: justify;
     margin-bottom: 30px;
+    font-size: 1em;
 }
 
 article img {
@@ -350,69 +352,25 @@ option {
         padding-right: 0px;
         padding-left: 0px;
     }
-    
-    /*.pres_line {
+
+    .home {
+        padding-top: 40%;
+    }
+    .home_container {
+        width: 60%;
+    }
+
+    .pres_line {
         display: none;
     }
-    
-    .section-present {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    
-    article h2 {
-        margin-top: 0px;
-        padding-top: 40px 40px 10px 40px;
-    }
-    
-    article p {
-        padding: 0 40px;
-        margin-bottom: 0px;
-    }
-    
-    article h3 {
-        padding: 20px 40px 0 40px;
-        margin-bottom: 5px;
-    }
-    
     article {
-        margin: 0;
-        padding-bottom: 40px;
+        margin-bottom: 20%;
+        padding: 7% 0;
     }
-    
-    .participant {
-        width: 50%;
-        margin: 10px auto;
-    }
-    
-    .participant p {
-        padding: 0 10px;
-    }
-    
-    .partenaire {
-        padding: 0 25px;
-    }
-    
-    .map {
-        display: block;
-        margin: 0 auto;
-        width: 85%;
-        margin-top: 30px;
-        height: 300px;
-        padding-bottom: 50px;
-    }
-    
-    iframe {
-        border: 0px !important;
-    }
-    
-    footer {
-        margin-top: 0px;
-    }
-    
-    footer p {
-        padding-left: 40px;
-        padding-right: 40px;
+
+    article h2 {
         text-align: center;
-    }*/
+        margin: 0 0 5% 0;
+    }
+   
 }
