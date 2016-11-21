@@ -65,7 +65,9 @@ textarea {
     padding:0;
 }
 
-a:hover {
+a:hover,
+a:visited,
+a:active {
     text-decoration: none;
 }
 
@@ -73,6 +75,9 @@ a:hover {
     outline: 0;
 }
 
+a {
+    cursor: pointer;
+}
 /* Home section */
 
 .home {
@@ -98,6 +103,13 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.9);
     font-family: 'Audiowide', cursive;
     font-size: 1em;
+}
+
+.down_arrow {
+    margin: 0 auto;
+    height: 10px;
+    width: 20px;
+    background: transparent url("img/down-arrow.svg") cover no-repeat;
 }
 
 
@@ -351,7 +363,7 @@ option {
 
 /* Small devices (tablets, 768px and up) */
 
-@media (max-width: 1050px) {
+@media (max-width: 1025px) {
     [class*="col-"] {
         padding-right: 10px;
         padding-left: 10px;
@@ -382,4 +394,18 @@ option {
         text-align: center;
     }
    
+}
+
+@media (min-width: 426px) and (max-width: 1025px) {
+    .home {
+        padding-top: 20%;
+    }
+
+    article {
+        margin-bottom: 10%;
+    }
+
+    article.partenaire div.col-md-6 {
+        padding-left: 7%;
+    }
 }

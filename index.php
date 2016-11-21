@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Hackathon Code Academie Rennes</title>
+    <title>Hackathon Code Academie Rennes | du 10 au 11 Décembre 2016</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico">
 </head>
 
 <body class="container-fluid">
@@ -191,6 +192,8 @@
             <h1 class="info">Le 10-11 Décembre 2016</h1>
             <h1 class="info">Au Loft, 3 Rue de Robien, Rennes</h1>
         </div>
+
+        <div class="down-arrow"></div>
     </header>
 
     <section class="col-md-12 pres background background_pres" id="anchor">
@@ -266,16 +269,16 @@
                 <h2 class="col-md-12">{ Partenaires }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
-                    <img class="col-md-12 col-sm-5 img-responsive" src="img/face.png" alt="Association FACE RENNES">
-                    <img class="col-md-12 col-sm-5 img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
-                    <img class="col-md-12 col-sm-5 img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
-                    <img class="col-md-12 col-sm-5 img-responsive" src="img/pole.png" alt="Pôle Emplois">
+                    <img class="col-md-12 col-sm-8 img-responsive" src="img/face.png" alt="Association FACE RENNES">
+                    <img class="col-md-12 col-sm-8 img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
+                    <img class="col-md-12 col-sm-8 img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
+                    <img class="col-md-12 col-sm-8 img-responsive" src="img/pole.png" alt="Pôle Emplois">
                 </div>
-                <div class="col-md-6 col-xs-6 col-md-6">
-                    <img class="col-md-12 col-sm-5 img-responsive" src="img/logo-printemps.jpg" alt="Printemps, chaine de magasin de vêtements et cosmétiques">
-                    <img class="col-md-12 col-sm-5 img-responsive" src="img/simplon.png" alt="Simplon.co, école dans le numérique">
-                    <img class="col-md-12 col-sm-5 img-responsive" src="img/republique.png" alt="République Française">
-                    <img class="col-md-12 col-sm-5 img-responsive" src="img/regionbretagne.png" alt="Région Bretagne">
+                <div class="col-md-6 col-xs-6 col-sm-6">
+                    <img class="col-md-12 col-sm-8 img-responsive" src="img/logo-printemps.jpg" alt="Printemps, chaine de magasin de vêtements et cosmétiques">
+                    <img class="col-md-12 col-sm-8 img-responsive" src="img/simplon.png" alt="Simplon.co, école dans le numérique">
+                    <img class="col-md-12 col-sm-8 img-responsive" src="img/republique.png" alt="République Française">
+                    <img class="col-md-12 col-sm-8 img-responsive" src="img/regionbretagne.png" alt="Région Bretagne">
                 </div>
             </article>
         </div>
