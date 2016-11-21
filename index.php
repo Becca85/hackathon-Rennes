@@ -266,16 +266,16 @@
                 <h2 class="col-md-12">{ Partenaires }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
-                    <img class="col-md-12 col-sm-5 col-sm-offset-1 img-responsive" src="img/face.png" alt="Association FACE RENNES">
-                    <img class="col-md-10 col-sm-5 col-sm-offset-1 img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
-                    <img class="col-md-12 col-sm-5 col-sm-offset-1 img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
-                    <img class="col-md-10 col-sm-5 col-sm-offset-1 img-responsive" src="img/pole.png" alt="Pôle Emplois">
+                    <img class="col-md-12 col-sm-5 img-responsive" src="img/face.png" alt="Association FACE RENNES">
+                    <img class="col-md-12 col-sm-5 img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
+                    <img class="col-md-12 col-sm-5 img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
+                    <img class="col-md-12 col-sm-5 img-responsive" src="img/pole.png" alt="Pôle Emplois">
                 </div>
                 <div class="col-md-6 col-xs-6 col-md-6">
-                    <img class="col-md-10 col-sm-5 col-sm-offset-1 img-responsive" src="img/logo-printemps.jpg" alt="Printemps, chaine de magasin de vêtements et cosmétiques">
-                    <img class="col-md-12 col-sm-5 col-sm-offset-1 img-responsive" src="img/simplon.png" alt="Simplon.co, école dans le numérique">
-                    <img class="col-md-10 col-sm-5 img-responsive col-md-offset-1" src="img/republique.png" alt="République Française">
-                    <img class="col-md-8 col-sm-5 col-sm-offset-1 img-responsive col-md-offset-2" src="img/regionbretagne.png" alt="Région Bretagne">
+                    <img class="col-md-12 col-sm-5 img-responsive" src="img/logo-printemps.jpg" alt="Printemps, chaine de magasin de vêtements et cosmétiques">
+                    <img class="col-md-12 col-sm-5 img-responsive" src="img/simplon.png" alt="Simplon.co, école dans le numérique">
+                    <img class="col-md-12 col-sm-5 img-responsive" src="img/republique.png" alt="République Française">
+                    <img class="col-md-12 col-sm-5 img-responsive" src="img/regionbretagne.png" alt="Région Bretagne">
                 </div>
             </article>
         </div>

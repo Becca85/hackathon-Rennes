@@ -137,6 +137,7 @@ article p {
 article img {
     margin-top: 10px;
     margin-bottom: 30px;
+    height: 1%;
 }
 
 article.partenaire:hover {/* avoid negative form of logo*/
@@ -164,7 +165,6 @@ section {
 .pres_line {
     height: 1px;
     background-color: #333;
-    width: 300px;
     margin-bottom: 20px;
     margin-left: 18px;
 }
@@ -196,6 +196,10 @@ section {
     text-transform: uppercase;
     font-size: 1.2em;
     cursor: pointer;
+}
+
+.partenaire {
+    overflow: hidden;
 }
 
 .contact {
@@ -349,8 +353,8 @@ option {
 
 @media (max-width: 1050px) {
     [class*="col-"] {
-        padding-right: 0px;
-        padding-left: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .home {
@@ -365,12 +369,17 @@ option {
     }
     article {
         margin-bottom: 20%;
-        padding: 7% 0;
+        padding: 7% 0%;
     }
 
     article h2 {
         text-align: center;
         margin: 0 0 5% 0;
+    }
+
+    footer {
+        margin-top: 0;
+        text-align: center;
     }
    
 }
