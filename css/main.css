@@ -65,7 +65,9 @@ textarea {
     padding:0;
 }
 
-a:hover {
+a:hover,
+a:visited,
+a:active {
     text-decoration: none;
 }
 
@@ -73,6 +75,9 @@ a:hover {
     outline: 0;
 }
 
+a {
+    cursor: pointer;
+}
 /* Home section */
 
 .home {
@@ -98,6 +103,13 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.9);
     font-family: 'Audiowide', cursive;
     font-size: 1em;
+}
+
+.down_arrow {
+    margin: 0 auto;
+    height: 10px;
+    width: 20px;
+    background: transparent url("img/down-arrow.svg") cover no-repeat;
 }
 
 
@@ -137,6 +149,7 @@ article p {
 article img {
     margin-top: 10px;
     margin-bottom: 30px;
+    height: 1%;
 }
 
 article.partenaire:hover {/* avoid negative form of logo*/
@@ -164,7 +177,6 @@ section {
 .pres_line {
     height: 1px;
     background-color: #333;
-    width: 300px;
     margin-bottom: 20px;
     margin-left: 18px;
 }
@@ -196,6 +208,10 @@ section {
     text-transform: uppercase;
     font-size: 1.2em;
     cursor: pointer;
+}
+
+.partenaire {
+    overflow: hidden;
 }
 
 .contact {
@@ -347,10 +363,10 @@ option {
 
 /* Small devices (tablets, 768px and up) */
 
-@media (max-width: 1050px) {
+@media (max-width: 1025px) {
     [class*="col-"] {
-        padding-right: 0px;
-        padding-left: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .home {
@@ -365,12 +381,31 @@ option {
     }
     article {
         margin-bottom: 20%;
-        padding: 7% 0;
+        padding: 7% 0%;
     }
 
     article h2 {
         text-align: center;
         margin: 0 0 5% 0;
     }
+
+    footer {
+        margin-top: 0;
+        text-align: center;
+    }
    
+}
+
+@media (min-width: 426px) and (max-width: 1025px) {
+    .home {
+        padding-top: 20%;
+    }
+
+    article {
+        margin-bottom: 10%;
+    }
+
+    article.partenaire div.col-md-6 {
+        padding-left: 7%;
+    }
 }
