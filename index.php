@@ -193,8 +193,6 @@
             <h1 class="info">Les 10-11 Décembre 2016</h1>
             <h1 class="info">Au Loft, 3 Rue de Robien, Rennes</h1>
         </div>
-
-        <div class="down-arrow"></div>
     </header>
 
     <section class="col-md-12 pres background background_pres" id="anchor">
@@ -270,16 +268,16 @@
                 <h2 class="col-md-12">{ Partenaires }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/face.png" alt="Association FACE RENNES">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/pole.png" alt="Pôle Emplois">
+                    <img class="img-responsive" src="img/face.png" alt="Association FACE RENNES">
+                    <img class="img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
+                    <img class="img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
+                    <img class="img-responsive" src="img/pole.png" alt="Pôle Emplois">
                 </div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/logo-printemps.jpg" alt="Printemps, chaine de magasin de vêtements et cosmétiques">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/simplon.png" alt="Simplon.co, école dans le numérique">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/republique.png" alt="République Française">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/regionbretagne.png" alt="Région Bretagne">
+                    <img class="img-responsive" src="img/logo-printemps.jpg" alt="Printemps, chaine de magasin de vêtements et cosmétiques">
+                    <img class="img-responsive" src="img/simplon.png" alt="Simplon.co, école dans le numérique">
+                    <img class="img-responsive" src="img/republique.png" alt="République Française">
+                    <img class="img-responsive" src="img/regionbretagne.png" alt="Région Bretagne">
                 </div>
             </article>
         </div>
@@ -316,14 +314,14 @@
 
 
     <!--========= Lieux =======-->
-    <section class="background background_lieux col-md-12">
+    <section class="background background_lieux col-md-12 lieux">
         <div class="col-md-10 col-md-offset-1">
             <div class="line"></div>
             <h2 class="text-center section_title">où nous trouver ?</h2>
             <div class="line"></div>
         </div>
 
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42634.30442059742!2d-1.711119644934551!3d48.09781087327661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede3708abe89d%3A0x41bb6408008f6136!2sLe+Loft+-+Cowork&#39;in+Rennes!5e0!3m2!1sfr!2sfr!4v1479388776307" width="300" height="550" frameborder="0" style="border: 1px solid black" allowfullscreen></iframe>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42634.30442059742!2d-1.711119644934551!3d48.09781087327661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede3708abe89d%3A0x41bb6408008f6136!2sLe+Loft+-+Cowork&#39;in+Rennes!5e0!3m2!1sfr!2sfr!4v1479388776307" width="300" height="50%" frameborder="0" allowfullscreen></iframe>
     </section>
 
     <footer>
