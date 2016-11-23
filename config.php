@@ -1,8 +1,8 @@
 <?php
 
     $serveur="localhost";
-    $login="trainee";
-    $pass="face";
+    $login="root";
+    $pass="facesimplon2016";
     $database = "hackathon";
 
     // tableau qui contient le nombre max de place dispo par metier

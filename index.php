@@ -171,16 +171,17 @@
 ?>
 
 <?php
-    echo "<div class='errorMessages'>";
     foreach ($error_message as $message) {
-       echo "-".$message."<br/>";
+        echo "<div class='infoMessages error'>";
+            echo "<p> <span class='glyphicon glyphicon-remove sign'></span>".$message."</p> <div class='ok-button'>Ok</div>";
+        echo "</div>";
     }
-    echo "</div>";
-    echo "<div class='infoMessages'>";
     foreach ($info_message as $message) {
-       echo "-".$message."<br/>";
+        echo "<div class='infoMessages validate'>";
+            echo "<p> <span class='glyphicon glyphicon-ok sign'></span>".$message."<div class='ok-button'>Ok</div></p>";
+        echo "</div>";
     }
-    echo "</div>";
+    
 ?>
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -334,12 +335,12 @@
 
 <script src="js/vendor/jquery-1.11.3.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
 <script>
+    //Google Analytics: change UA-XXXXX-X to be your site's ID.
     (function (b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
         b[l] || (b[l] =
@@ -354,19 +355,29 @@
     }(window, document, 'script', 'ga'));
     ga('create', 'UA-XXXXX-X', 'auto');
     ga('send', 'pageview');
-</script>
 
-<script src="js/vendor/jquery-1.10.2.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.js-scrollTo').on('click', function () { // Au clic sur un élément
-            var page = $(this).attr('href'); // Page cible
-            var speed = 750; // Durée de l'animation (en ms)
-            $('html, body').animate({
-                scrollTop: $(page).offset().top
-            }, speed); // Go
-            return false;
+    /*
+      jQuery codes for smooth scrolling. The following code is from
+      https://css-tricks.com/snippets/jquery/smooth-scrolling/
+    */
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 700);
+                    return false;
+                }
+            }
         });
+    });
+
+    //hide function for infoMessages
+    $(".ok-button").click(function () {
+        $(this).parent().slideUp(300);
     });
 </script>
 
