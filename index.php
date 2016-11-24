@@ -75,7 +75,7 @@
     */
     function select(PDO $connexion){
         $requete=$connexion->prepare("
-            SELECT * FROM Inscrits");
+            SELECT * FROM hackathon_inscrits");
         $requete->execute();
         $resultat=$requete->fetchall();     
         return $resultat;
@@ -118,7 +118,7 @@
                            
 
                             if ($tabmax[$metier]>$tabcompteur[$metier]){
-                            $sql = "INSERT INTO Inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
+                            $sql = "INSERT INTO hackathon_inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
                             // Envoi des données
                             $requete2= $connexion->prepare($sql);
                             $params = array('nom'=>$nom, 'prenom'=>$prenom, 'email'=>$email, 'metier'=>$metier, 'message'=>$message);
@@ -313,8 +313,39 @@
             </div>
         </div>
     </section>
+    <div id="popup1" class="mentionsLegales displayNone">
+        <div>
+            <div id="close" class = "mentionsLegalesCroix">Mentions Légales</div>
+        </div>
+        <div >
+            <h2>Editeur du site</h2>
 
+            <p>Association FACE Rennes : 23 rue d’Aiguillon, 35200 Rennes</p>
 
+            <p>E-mail : codeacademie@fondationface.org</p>
+
+            <p>Site Web : www.face.bzh</p>
+
+            <p>Siret : 42894713900047</p>
+
+            <p>Tel : 02.99.86.89.26</p>
+
+            <p>Directeur de publication : Erwann DUCLOS</p>
+
+            <h2>Hébergement :</h2>
+
+            <p>OVH</p>
+            <p>2 rue Kellermann</p>
+            <p>BP 80157</p>
+            <p>59053 ROUBAIX Cedex 1</p>
+            <p>Tél : +33 (0)8 203 203 63</p>
+            <p>mail : support@ovh.com</p>
+
+            <h2>Indisponibilité du site</h2>
+
+            <p>la code académie s’engage à faire ses meilleurs efforts pour assurer aux utilisateurs une accessibilité du site à tout moment. La code académie ne pourra être tenue pour responsable, en cas d’indisponibilité du site, pour quelque cause que ce soit.</p>
+        </div>
+    </div>
     <!--========= Lieux =======-->
     <section class="background background_lieux col-md-12">
         <div class="col-md-10 col-md-offset-1">
@@ -327,7 +358,9 @@
     </section>
 
     <footer>
-        <p>HACKATON CODE ACADEMIE - Les 10 -11 Décembre - Au Loft, 3 Rue de Robien, Rennes</p>
+        <p>HACKATON CODE ACADEMIE - Les 10 -11 Décembre - Au Loft, 3 Rue de Robien, Rennes -</p>
+        <!--<p class="mentionsLegalesMenu" onclick="hideMentions()"> Mentions Légales</p>-->
+        <p id="modal-btn">Mentions légales</p>
     </footer>
 
 </body>
@@ -340,6 +373,15 @@
 
 
 <script>
+    //Modal
+    $('#modal-btn').click(function(){
+        $('#popup1').toggleClass('displayNone');
+    });
+
+    $('#close').click(function(){
+        $('#popup1').toggleClass('displayNone');
+    });
+
     //Google Analytics: change UA-XXXXX-X to be your site's ID.
     (function (b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
