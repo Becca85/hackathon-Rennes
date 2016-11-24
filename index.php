@@ -342,6 +342,13 @@
             <h2>Indisponibilité du site</h2>
 
             <p>la code académie s’engage à faire ses meilleurs efforts pour assurer aux utilisateurs une accessibilité du site à tout moment. La code académie ne pourra être tenue pour responsable, en cas d’indisponibilité du site, pour quelque cause que ce soit.</p>
+
+            <h2>TEAM</h2>
+
+            <p>Rebecca MACCIO  -   as Back End Developper </p>
+            <p>Ronald MARCEL  -    as Back End Developper </p>
+            <p>Lise POIRIER    -   as Front End Developper </p>
+            <p>Latifa BOUMIZY  -   as Front End Developper </p>
         </div>
     </div>
     <!--========= Lieux =======-->
