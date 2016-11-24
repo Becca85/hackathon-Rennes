@@ -114,7 +114,7 @@ a {
     text-align:right;
     margin-right: 20vw;
     margin-top: 1vh;
-    padding: 0.5vw;
+    padding: 0.5vh;
     border-radius: 10%;
     cursor: pointer;
     float:right;
@@ -134,7 +134,7 @@ div.validate div.ok-button:hover {
 .home {
     height: 100vh;
     width: 100%;
-    padding-top: 15%; /*for the text position*/
+    padding-top: 35vh; /*for the text position*/
 }
 
 .home_container {
@@ -154,13 +154,6 @@ div.validate div.ok-button:hover {
     background-color: rgba(0, 0, 0, 0.9);
     font-family: 'Audiowide', cursive;
     font-size: 1em;
-}
-
-.down_arrow {
-    margin: 0 auto;
-    height: 10px;
-    width: 20px;
-    background: transparent url("img/down-arrow.svg") cover no-repeat;
 }
 
 
@@ -198,9 +191,12 @@ article p {
 }
 
 article img {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    height: 1%;
+    margin: 10px auto 30px auto;
+    display: block;
+    max-height: 10vh;
+    max-width: 70%;
+    width: auto;
+    height: auto;
 }
 
 article.partenaire:hover {/* avoid negative form of logo*/
@@ -208,11 +204,10 @@ article.partenaire:hover {/* avoid negative form of logo*/
     color: #222;
 }
 
-
 /* Style des sections*/
 
 .section_title {
-    padding : 0 40px 0 30px;
+    padding : 0 4vh 0 3vh;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: whitesmoke;
@@ -269,14 +264,18 @@ section {
     height: 100vh;
 }
 
+.lieux { 
+    height: 95vh;
+}
+
 .map {
     display: block;
-    margin: 2% auto;
-    margin-top: 50px;
+    margin: 5vh auto;
+    padding-top: 5vh;
+    height:70vh;
     width: 75%;
     /*filter: saturate(1);*/
     opacity: 0.9;
-    margin-bottom: 100px;
 }
 
 .mentionsLegales {
@@ -363,8 +362,6 @@ footer p {
     background-image: url("../img/clavier.jpg");
 }
 
-
-
 /* The code below is the design for the contact form */
 
 .contact-area {
@@ -407,7 +404,7 @@ footer p {
 
 .contact-area input.submit-button {
     text-transform: uppercase;
-    height: 5%;
+    height: 5vh;
     margin-top: 1%;
     color: whitesmoke;
    
@@ -474,9 +471,6 @@ option {
         margin-top: 1.5vh;
     }
 
-    .home {
-        padding-top: 40%;
-    }
 
     .home_container {
         width: 60%;
@@ -503,9 +497,6 @@ option {
 }
 
 @media (min-width: 426px) and (max-width: 1025px) {
-    .home {
-        padding-top: 20%;
-    }
 
     article {
         margin-bottom: 10%;
@@ -513,5 +504,15 @@ option {
 
     article.partenaire div.col-md-6 {
         padding-left: 7%;
+    }
+}
+
+@media (min-width: 1320px) {
+    .infoMessages {
+        height: 5vh;
+        padding-top: 0;
+    }
+    .ok-button {
+        padding: 0.5vh;
     }
 }
