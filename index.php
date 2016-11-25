@@ -75,7 +75,7 @@
     */
     function select(PDO $connexion){
         $requete=$connexion->prepare("
-            SELECT * FROM Inscrits");
+            SELECT * FROM hackathon_inscrits");
         $requete->execute();
         $resultat=$requete->fetchall();     
         return $resultat;
@@ -118,7 +118,7 @@
                            
 
                             if ($tabmax[$metier]>$tabcompteur[$metier]){
-                            $sql = "INSERT INTO Inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
+                            $sql = "INSERT INTO hackathon_inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
                             // Envoi des données
                             $requete2= $connexion->prepare($sql);
                             $params = array('nom'=>$nom, 'prenom'=>$prenom, 'email'=>$email, 'metier'=>$metier, 'message'=>$message);
@@ -190,11 +190,9 @@
     <header class="home background background_home">
         <div class="home_container">
             <h1 class="info">HACKATON CODE ACADEMIE</h1>
-            <h1 class="info">Le 10-11 Décembre 2016</h1>
+            <h1 class="info">Les 10-11 Décembre 2016</h1>
             <h1 class="info">Au Loft, 3 Rue de Robien, Rennes</h1>
         </div>
-
-        <div class="down-arrow"></div>
     </header>
 
     <section class="col-md-12 pres background background_pres" id="anchor">
@@ -211,26 +209,26 @@
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Présentation }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
-                <p class="col-md-12">Bienvenue à la première édition de ce Hackathon qui vous est proposé par <a href="http://code-academie.fr/" target="_blank">la Code Académie</a>, <a href="https://www.printemps.com/magasins/rennes" target="_blank">Printemps</a> et <a href="http://www.coworkinrennes.com/" target="_blank">le Loft</a>. Rejoignez-nous le temps d'un week-end pour exploiter les données que nous fournit Printemps et innover ainsi que concevoir des applications à loisir! C'est un challenge multi-compétences qui fait la part belle au travail d'équipe, à la communication et à la créativité... Sans oublier une bonne dose de technique pour donner vie à vos projets. Le meilleur projet aura droit à une distinction et un cadeau mystère... A vos ordis, prêt ? Incrivez-vous!</p>
+                <p class="col-md-12">Bienvenue à la première édition de ce Hackathon qui vous est proposé par <a href="http://code-academie.fr/" target="_blank">la Code Académie</a>, <a href="https://www.printemps.com/magasins/rennes" target="_blank">Printemps</a> et <a href="http://www.coworkinrennes.com/" target="_blank">le Loft</a>. Rejoignez-nous le temps d'un week-end pour exploiter les données que nous fournit Printemps : innovons et concevons des applications à loisir! C'est un challenge multi-compétences qui fait la part belle au travail d'équipe, à la communication et à la créativité... Sans oublier une bonne dose de technique pour donner vie à vos projets. Le meilleur projet aura droit à une distinction et un cadeau mystère... A vos ordis, prêt ? Inscrivez-vous!</p>
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Un hacka-quoi ? }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
-                <p class="col-md-12">Le mot Hackathon est la combinaison de deux notions : hack et marathon. Un hack, en dépit de sa connotation négative initiale, est désormais le fait de détourner un objet/principe de son utilisation basique pour nous faciliter la vie (d'ailleurs on vous recommande fortement de faire un petit tour sur youtube et de chercher des <a href="https://www.youtube.com/watch?v=567Hkus_MVs" target="_blank">life hack</a>... ça pourrait vous changer la vie dans certaines occasions!). Dans notre cadre, ce sont les données de Printemps qui sont à hacker pour en tirer de nouvelles perspectives pour eux... ou le grand public. Vous n'êtes pas limité.e.s dans la finalité de vos applications. La deuxième notion derrière le hackathon est le marathon. Vous allez devoir coder/designer/échanger/créer et surtout vous éclater pendant 48h non-stop! (sisi, vous avez le droit de dormir quand même). Le but est que vous fournissiez le projet le plus abouti dans un laps de temps très court et que vous le présentiez à un jury et devant les autres participants.</p>
+                <p class="col-md-12">Le mot Hackathon est la combinaison de deux notions : hack et marathon. Un hack, en dépit de sa connotation négative initiale, est désormais le fait de détourner un objet/principe de son utilisation basique pour nous faciliter la vie (d'ailleurs on vous recommande fortement de faire un petit tour sur youtube et de chercher des <a href="https://www.youtube.com/watch?v=567Hkus_MVs" target="_blank">life hack</a>... ça pourrait vous changer la vie dans certaines occasions!). Dans notre cadre, ce sont les données de Printemps qui sont à hacker pour en tirer de nouvelles perspectives pour eux... ou le grand public. Vous n'êtes pas limité.e.s dans la finalité de vos applications. La deuxième notion derrière le hackathon est le marathon. Vous allez devoir coder/designer/échanger/créer et surtout vous éclater pendant 48h non-stop! (sisi, vous avez le droit de dormir quand même). Le but est que vous fournissiez le projet le plus abouti dans un laps de temps très court et que vous le présentiez à un jury et devant les autres participant.e.s.</p>
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Ok super, mais qui peut participer ? }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
-                <p class="col-md-12">Ce challenge s'adresse à tou.te.s ceux.celles qui souhaitent travailler en équipe sur l'élaboration d'un nouveau concept à partir de données réelles. Découvrez l'univers des start-up (ou partagez votre expérience) pendant cet événement. Vous pouvez même pérenniser votre projet suite à ce week-end ou lui donner vie uniquement le temps de ce week-end... Libre à vous d'en décider! Tous les profils sont les bienvenus, mais pour donner sa chance à tout le monde et pour des raisons de sécurité, nous restreignons le nombre de places en fonction de certains postes : 12 développeurs.euses, 6 designers.designeuses, 6 chef.fe.s de projets, 6 marketing/communication pour un total de 30 places. A cela se rajoutera les apprenant.e.s de la Code Académie pour un total de 20 places  Vous ne rentrez pas dans ces cases ? Envoyez-nous votre candidature à l'adresse <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a> et nous ferons un retour (n'oubliez pas votre nom, prénom et domaine d'activité). Le public pourra venir à l'inauguration du projet ou à la cérémonie de remise des prix.</p>
+                <p class="col-md-12">Ce challenge s'adresse à tou.te.s ceux.celles qui souhaitent travailler en équipe sur l'élaboration d'un nouveau concept à partir de données réelles. Découvrez l'univers des start-up ou partagez votre expérience pendant cet événement. Vous pouvez même pérenniser votre projet suite à ce week-end ou lui donner vie uniquement le temps de ces deux jours... Libre à vous d'en décider! Tous les profils sont les bienvenus, mais pour donner sa chance à tout le monde et pour des raisons de sécurité, nous restreignons le nombre de places en fonction de certains postes : 12 développeurs.euses, 6 designers.designeuses, 6 chef.fe.s de projets, 6 marketing/communication pour un total de 30 places. Se rajouteront les apprenant.e.s de la Code Académie pour un total de 20 places. Vous ne rentrez pas dans ces cases ? Envoyez-nous votre candidature à l'adresse <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a> et nous vous ferons un retour (n'oubliez pas votre nom, prénom et domaine d'activité). Le public pourra venir à l'inauguration du projet ou à la cérémonie de remise des prix.</p>
 
                 <p class="col-md-12">Clôture des inscriptions le mercredi 7 Décembre</p>
 
-                <p class="col-md-12">Une participation de 25€ par participant.e sera demandée au début de l'événement. Cette participation nous aidera à couvrir les frais de l'événement et n'aura aucun but lucratif (c'est pour la location de la salle, acheter les différents repas, un buffet de clôture et du café... beaucoup de café). FACE Rennes contribue majoritairement aux coûts de l'événement.</p> 
+                <p class="col-md-12">Une participation de 25€ par participant.e sera demandée au début de l'événement. Cette participation nous aidera à couvrir les frais de l'événement et n'aura aucun but lucratif (c'est pour la location de la salle, les différents repas, le buffet de clôture et le café... beaucoup de café). FACE Rennes contribue majoritairement aux coûts de l'événement.</p> 
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ Et qui gère tout ça ? }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
-                <p class="col-md-12"><a href="http://code-academie.fr/" target="_blank">La code académie</a> s'occupe de l'aspect logistique et de la communication sur l'événement. Qui sommes-nous ? Nous sommes un centre de formation qui a pour but de former des demandeurs.euses d'emploi au poste de développeur.euses web junior en 8 mois. C'est un projet porté par l'association FACE Rennes (Fondation Agir Contre l'Exclusion Rennes) avec le soutien des institutions publiques comme Pôle emploi, la Région ou l'Etat. Nous en sommes à notre première promotion et cet événement a un double but pour nous : permettre à nos apprenant.e.s de se confronter au monde professionnel et nous faire connaître. Cet événement n'aurait pas été possible sans la participation de Printemps qui nous fournit ses données et le Loft, notre patrenaire, qui nous met à disposition ses locaux. Vous êtes une entreprise et souhaitez participez à notre prochaine édition ou aider la Code Académie ? Contactez-nous sur <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a>.</p>
+                <p class="col-md-12"><a href="http://code-academie.fr/" target="_blank">La Code Académie</a> s'occupe de l'aspect logistique et de la communication sur l'événement. Qui sommes-nous ? Nous sommes un centre de formation qui a pour but de former des demandeurs.euses d'emploi au poste de développeur.euses web junior en 8 mois. C'est un projet porté par l'association FACE Rennes (Fondation Agir Contre l'Exclusion) avec le soutien des institutions publiques comme Pôle emploi, la Région ou l'Etat. Nous en sommes à notre première promotion et cet événement a un double but pour nous : permettre à nos apprenant.e.s de se confronter au monde professionnel et nous faire connaître. Cet événement n'aurait pas été possible sans la participation de Printemps qui nous fournit ses données et le Loft, notre partenaire, qui nous met à disposition ses locaux. Vous êtes une entreprise et souhaitez participer à notre prochaine édition ou aider la Code Académie ? Contactez-nous sur <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a>.</p>
             </article>
 
         </div>
@@ -254,15 +252,15 @@
                 <h2 class="col-md-12">{ planning } <small>JOURNÉE 1</small></h2>
                 <div class="pres_line col-md-8 col-md-offset-1 "></div>
                 <h3 class="col-md-12">9h00</h3>
-                <p class="col-md-12">Début de l'événement autour d'un petit déjeuner. Suite à ce moment convivial, les équipes seront constituées et les données leur seront distribuées</p>
+                <p class="col-md-12">Début de l'événement autour d'un petit-déjeuner. Suite à ce moment convivial, les équipes sont constituées et les données leur sont distribuées.</p>
                 <h3 class="col-md-12">10h00</h3>
-                <p class="col-md-12">Les équipes se lancent sur le projet. Les locaux seront ouverts 24h/24h pendant toute la durée de l'événement. Une permanence sera assurée par la code académie pour toute question éventuelle.</p>
+                <p class="col-md-12">Les équipes se lancent sur le projet. Les locaux sont ouverts 24h/24h pendant toute la durée de l'événement. Une permanence est assurée par la Code Académie pour toute question éventuelle.</p>
             </article>
             <article class="col-md-12">
                 <h2 class="col-md-12">{ planning } <small>JOURNÉE 2</small></h2>
                 <div class="pres_line col-md-8 col-md-offset-1 "></div>
                 <h3 class="col-md-12">17h00</h3>
-                <p class="col-md-12">Présentation des projets par chaque équipe devant un jury et les autres participants. Délibération du jury et annonce du.de la gagnant.e. Suite à cela, le banquet de clôture commencera.</p>
+                <p class="col-md-12">Présentation des projets par chaque équipe devant un jury et les autres participant.e.s. Délibération du jury et annonce du.de la gagnant.e. Suite à cela, le banquet de clôture commence.</p>
                 <h3 class="col-md-12">19h00</h3>
                 <p class="col-md-12">Clôture de l'événement, avec beaucoup de remerciements!</p>
             </article>
@@ -270,16 +268,16 @@
                 <h2 class="col-md-12">{ Partenaires }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/face.png" alt="Association FACE RENNES">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/pole.png" alt="Pôle Emplois">
+                    <img class="img-responsive" src="img/face.png" alt="Association FACE RENNES">
+                    <img class="img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
+                    <img class="img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
+                    <img class="img-responsive" src="img/pole.png" alt="Pôle Emplois">
                 </div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/logo-printemps.jpg" alt="Printemps, chaine de magasin de vêtements et cosmétiques">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/simplon.png" alt="Simplon.co, école dans le numérique">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/republique.png" alt="République Française">
-                    <img class="col-md-12 col-sm-8 img-responsive" src="img/regionbretagne.png" alt="Région Bretagne">
+                    <img class="img-responsive" src="img/logo-printemps.jpg" alt="Printemps, chaine de magasin de vêtements et cosmétiques">
+                    <img class="img-responsive" src="img/simplon.png" alt="Simplon.co, école dans le numérique">
+                    <img class="img-responsive" src="img/republique.png" alt="République Française">
+                    <img class="img-responsive" src="img/regionbretagne.png" alt="Région Bretagne">
                 </div>
             </article>
         </div>
@@ -302,7 +300,7 @@
                     <input type="text" name="prenom" id="prenom" placeholder="Prénom" />
                     <input type="text" name="email" id="email" placeholder="Email" />
                     <select name="metier" id="metier">
-                        <option value='Developpeur.euse'>Developpeur.euse</option>
+                        <option value='Developpeur.euse'>Développeur.euse</option>
                         <option value='Designer.euse'>Designer.euse</option>
                         <option value='Chef.fe de projet'>Chef.fe de projet</option>
                         <option value='Marketing / Communication'>Marketing/communication</option>
@@ -313,21 +311,61 @@
             </div>
         </div>
     </section>
+    <div id="popup1" class="mentionsLegales displayNone">
+        <div>
+            <div id="close" class = "mentionsLegalesCroix">Mentions Légales</div>
+        </div>
+        <div >
+            <h2>Editeur du site</h2>
 
+            <p>Association FACE Rennes : 23 rue d’Aiguillon, 35200 Rennes</p>
 
+            <p>E-mail : codeacademie@fondationface.org</p>
+
+            <p>Site Web : www.face.bzh</p>
+
+            <p>Siret : 42894713900047</p>
+
+            <p>Tel : 02.99.86.89.26</p>
+
+            <p>Directeur de publication : Erwann DUCLOS</p>
+
+            <h2>Hébergement :</h2>
+
+            <p>OVH</p>
+            <p>2 rue Kellermann</p>
+            <p>BP 80157</p>
+            <p>59053 ROUBAIX Cedex 1</p>
+            <p>Tél : +33 (0)8 203 203 63</p>
+            <p>mail : support@ovh.com</p>
+
+            <h2>Indisponibilité du site</h2>
+
+            <p>la code académie s’engage à faire ses meilleurs efforts pour assurer aux utilisateurs une accessibilité du site à tout moment. La code académie ne pourra être tenue pour responsable, en cas d’indisponibilité du site, pour quelque cause que ce soit.</p>
+
+            <h2>TEAM</h2>
+
+            <p>Rebecca MACCIO  -   as Back End Developper </p>
+            <p>Ronald MARCEL  -    as Back End Developper </p>
+            <p>Lise POIRIER    -   as Front End Developper </p>
+            <p>Latifa BOUMIZY  -   as Front End Developper </p>
+        </div>
+    </div>
     <!--========= Lieux =======-->
-    <section class="background background_lieux col-md-12">
+    <section class="background background_lieux col-md-12 lieux">
         <div class="col-md-10 col-md-offset-1">
             <div class="line"></div>
             <h2 class="text-center section_title">où nous trouver ?</h2>
             <div class="line"></div>
         </div>
 
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42634.30442059742!2d-1.711119644934551!3d48.09781087327661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede3708abe89d%3A0x41bb6408008f6136!2sLe+Loft+-+Cowork&#39;in+Rennes!5e0!3m2!1sfr!2sfr!4v1479388776307" width="300" height="550" frameborder="0" style="border: 1px solid black" allowfullscreen></iframe>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42634.30442059742!2d-1.711119644934551!3d48.09781087327661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede3708abe89d%3A0x41bb6408008f6136!2sLe+Loft+-+Cowork&#39;in+Rennes!5e0!3m2!1sfr!2sfr!4v1479388776307" width="300" height="50%" frameborder="0" allowfullscreen></iframe>
     </section>
 
     <footer>
-        <p>HACKATON CODE ACADEMIE - Le 10 -11 Décembre - Au Loft, 3 Rue de Robien, Rennes</p>
+        <p>HACKATON CODE ACADEMIE - Les 10 -11 Décembre - Au Loft, 3 Rue de Robien, Rennes -</p>
+        <!--<p class="mentionsLegalesMenu" onclick="hideMentions()"> Mentions Légales</p>-->
+        <p id="modal-btn">Mentions légales</p>
     </footer>
 
 </body>
@@ -340,6 +378,15 @@
 
 
 <script>
+    //Modal
+    $('#modal-btn').click(function(){
+        $('#popup1').toggleClass('displayNone');
+    });
+
+    $('#close').click(function(){
+        $('#popup1').toggleClass('displayNone');
+    });
+
     //Google Analytics: change UA-XXXXX-X to be your site's ID.
     (function (b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
