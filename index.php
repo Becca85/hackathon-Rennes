@@ -1,17 +1,18 @@
 <!doctype html>
-<html class="no-js" lang="fr">
+<html class="no-js" lang="fr"prefix="og: http://ogp.me/ns#">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Hackathon Code Academie Rennes | du 10 au 11 Décembre 2016</title>
-    <meta name="description" content="">
+    <meta name="description" content="Bienvenue à la première édition de ce Hackathon qui vous est proposé par la Code Académie. Rejoignez-nous le temps d'un week-end pour exploiter les données !">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="html-coding.svg">
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="icon" href="html-coding.svg">
-
+    <meta property="og:title" content="Hackathon Code Académie | Du 10 au 11 Décembre 2016"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://hackathon.code-academie.fr"/>
+    <meta property="og:description" data-cg-meta="" content="Bienvenue à la première édition de ce Hackathon qui vous est proposé par la Code Académie, Printemps et le Loft. Rejoignez-nous le temps d'un week-end pour exploiter les données !"/>
+    <meta property="og:image" content="http://hackathon.code-academie.fr/img/LogoCA.JPG" />
+    <meta property="og:image:type" content="image/jpeg" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
