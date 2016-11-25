@@ -78,7 +78,6 @@ a:active {
 a {
     cursor: pointer;
 }
-/* Home section */
 
 /* CSS for error/info message */
 
@@ -131,6 +130,9 @@ div.validate div.ok-button:hover {
     background-color: white;
 }
 
+/* Home section */
+
+
 .home {
     height: 100vh;
     width: 100%;
@@ -171,7 +173,7 @@ article:hover {
 }
 
 article h2 {
-    font-family: 'Audiowide', cursive;
+    font-family: 'TGL', cursive;
     font-weight: 400;
     font-size: 1.1em;
     margin-top: 30px;
@@ -212,7 +214,7 @@ article.partenaire:hover {/* avoid negative form of logo*/
     text-transform: uppercase;
     color: whitesmoke;
     font-size: 15px;
-    font-family: 'Audiowide', cursive;
+    font-family: 'TGL', cursive;
 }
 
 section {

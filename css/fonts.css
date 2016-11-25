@@ -18,3 +18,9 @@
 	font-weight: 900;
 	src: local('Lato Black'), local('Lato-Black'), url(../fonts/Lato-Black.ttf) format('truetype');
 }
+
+@font-face {
+	font-family: 'TGL';
+	font-style: normal;
+	src: url(../fonts/TGL-31034/ttf);
+}
