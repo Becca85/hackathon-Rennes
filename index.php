@@ -76,7 +76,7 @@
     */
     function select(PDO $connexion){
         $requete=$connexion->prepare("
-            SELECT * FROM Inscrits");
+            SELECT * FROM hackathon_inscrits");
         $requete->execute();
         $resultat=$requete->fetchall();     
         return $resultat;
@@ -119,7 +119,7 @@
                            
 
                             if ($tabmax[$metier]>$tabcompteur[$metier]){
-                            $sql = "INSERT INTO Inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
+                            $sql = "INSERT INTO hackathon_inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
                             // Envoi des données
                             $requete2= $connexion->prepare($sql);
                             $params = array('nom'=>$nom, 'prenom'=>$prenom, 'email'=>$email, 'metier'=>$metier, 'message'=>$message);
