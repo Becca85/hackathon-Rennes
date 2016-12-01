@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Hackathon Code Academie Rennes | du 10 au 11 Décembre 2016</title>
+    <title>Hackathon Code Academie Rennes | Du 10 au 11 Décembre 2016</title>
     <meta name="description" content="Bienvenue à la première édition de ce Hackathon qui vous est proposé par la Code Académie. Rejoignez-nous le temps d'un week-end pour exploiter les données !">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Hackathon Code Académie | Du 10 au 11 Décembre 2016"/>
@@ -76,7 +76,7 @@
     */
     function select(PDO $connexion){
         $requete=$connexion->prepare("
-            SELECT * FROM hackathon_inscrits");
+            SELECT * FROM Inscrits");
         $requete->execute();
         $resultat=$requete->fetchall();     
         return $resultat;
@@ -119,7 +119,7 @@
                            
 
                             if ($tabmax[$metier]>$tabcompteur[$metier]){
-                            $sql = "INSERT INTO hackathon_inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
+                            $sql = "INSERT INTO Inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
                             // Envoi des données
                             $requete2= $connexion->prepare($sql);
                             $params = array('nom'=>$nom, 'prenom'=>$prenom, 'email'=>$email, 'metier'=>$metier, 'message'=>$message);
@@ -312,9 +312,26 @@
             </div>
         </div>
     </section>
-    <div id="popup1" class="mentionsLegales displayNone">
+    
+    <!--========= Lieux =======-->
+    <section class="background background_lieux col-md-12 lieux">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="line"></div>
+            <h2 class="text-center section_title">où nous trouver ?</h2>
+            <div class="line"></div>
+        </div>
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42634.30442059742!2d-1.711119644934551!3d48.09781087327661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede3708abe89d%3A0x41bb6408008f6136!2sLe+Loft+-+Cowork&#39;in+Rennes!5e0!3m2!1sfr!2sfr!4v1479388776307" width="300" height="50%" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>HACKATON CODE ACADEMIE - Les 10 -11 Décembre - Au Loft, 3 Rue de Robien, Rennes - <span id="modal-btn">Mentions légales</span> </p>
+    </footer>
+
+    <!--======== Modal =======-->
+    <div class="mentionsLegales">
         <div>
-            <div id="close" class = "mentionsLegalesCroix">Mentions Légales</div>
+            <div class='modalTitle'>Mentions Légales <span id='close' class='glyphicon glyphicon-remove modalClose'></span></div>
         </div>
         <div >
             <h2>Editeur du site</h2>
@@ -344,7 +361,7 @@
 
             <p>la code académie s’engage à faire ses meilleurs efforts pour assurer aux utilisateurs une accessibilité du site à tout moment. La code académie ne pourra être tenue pour responsable, en cas d’indisponibilité du site, pour quelque cause que ce soit.</p>
 
-            <h2>TEAM</h2>
+            <h2>Team</h2>
 
             <p>Rebecca MACCIO  -   as Back End Developper </p>
             <p>Ronald MARCEL  -    as Back End Developper </p>
@@ -352,22 +369,6 @@
             <p>Latifa BOUMIZY  -   as Front End Developper </p>
         </div>
     </div>
-    <!--========= Lieux =======-->
-    <section class="background background_lieux col-md-12 lieux">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="line"></div>
-            <h2 class="text-center section_title">où nous trouver ?</h2>
-            <div class="line"></div>
-        </div>
-
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42634.30442059742!2d-1.711119644934551!3d48.09781087327661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede3708abe89d%3A0x41bb6408008f6136!2sLe+Loft+-+Cowork&#39;in+Rennes!5e0!3m2!1sfr!2sfr!4v1479388776307" width="300" height="50%" frameborder="0" allowfullscreen></iframe>
-    </section>
-
-    <footer>
-        <p>HACKATON CODE ACADEMIE - Les 10 -11 Décembre - Au Loft, 3 Rue de Robien, Rennes -</p>
-        <!--<p class="mentionsLegalesMenu" onclick="hideMentions()"> Mentions Légales</p>-->
-        <p id="modal-btn">Mentions légales</p>
-    </footer>
 
 </body>
 
@@ -377,55 +378,57 @@
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-
 <script>
     //Modal
-    $('#modal-btn').click(function(){
-        $('#popup1').toggleClass('displayNone');
-    });
-
-    $('#close').click(function(){
-        $('#popup1').toggleClass('displayNone');
-    });
-
-    //Google Analytics: change UA-XXXXX-X to be your site's ID.
-    (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function () {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = 'https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
-    ga('send', 'pageview');
-
-    /*
-      jQuery codes for smooth scrolling. The following code is from
-      https://css-tricks.com/snippets/jquery/smooth-scrolling/
-    */
-    $(function () {
-        $('a[href*=#]:not([href=#])').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 700);
-                    return false;
-                }
-            }
+   jQuery(document).ready(function($) {
+    
+        $('#modal-btn').click(function(){
+            $('.mentionsLegales').css('display', 'inherit');
         });
-    });
 
-    //hide function for infoMessages
-    $(".ok-button").click(function () {
-        $(this).parent().slideUp(300);
+        $('#close').click(function(){
+            $('.mentionsLegales').css('display', 'none');
+        });
+
+        //Google Analytics: change UA-XXXXX-X to be your site's ID.
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+
+        /*
+          jQuery codes for smooth scrolling. The following code is from
+          https://css-tricks.com/snippets/jquery/smooth-scrolling/
+        */
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 700);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        //hide function for infoMessages
+        $(".ok-button").click(function () {
+            $(this).parent().slideUp(300);
+        });
     });
 </script>
 
