@@ -269,6 +269,7 @@
                 <h2 class="col-md-12">{ Partenaires }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
+                    <img class="img-responsive" src="img/ref_esc.png" alt="ESC School of Business">
                     <img class="img-responsive" src="img/face.png" alt="Association FACE RENNES">
                     <img class="img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
                     <img class="img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
