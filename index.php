@@ -235,7 +235,7 @@
         <!-- Colonne du nombre de participant et du planning -->
         <div class="col-md-5 column">
             <article class="col-md-12">
-                <h2 class="col-md-12">{ Nombre de places disponibles : <?= array_sum($tabmax)-  array_sum($tabcompteur); ?> /50 }</h2>
+                <h2 class="col-md-12">{ Places prises : <?= array_sum($tabcompteur); ?> /50 }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1 "></div>
                 <?php
                     foreach ($tabcompteur as $key => $value) {
