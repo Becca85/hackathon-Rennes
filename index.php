@@ -222,8 +222,6 @@
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <p class="col-md-12">Ce challenge s'adresse à tou.te.s ceux.celles qui souhaitent travailler en équipe sur l'élaboration d'un nouveau concept à partir de données réelles. Découvrez l'univers des start-up ou partagez votre expérience pendant cet événement. Vous pouvez même pérenniser votre projet suite à ce week-end ou lui donner vie uniquement le temps de ces deux jours... Libre à vous d'en décider! Tous les profils sont les bienvenus, mais pour donner sa chance à tout le monde et pour des raisons de sécurité, nous restreignons le nombre de places en fonction de certains postes : 12 développeurs.euses, 6 designers.designeuses, 6 chef.fe.s de projets, 6 marketing/communication pour un total de 30 places. Se rajouteront les apprenant.e.s de la Code Académie pour un total de 20 places. Vous ne rentrez pas dans ces cases ? Envoyez-nous votre candidature à l'adresse <a href="mailto:codeacademie@fondationface.org">codeacademie@fondationface.org</a> et nous vous ferons un retour (n'oubliez pas votre nom, prénom et domaine d'activité). Le public pourra venir à l'inauguration du projet ou à la cérémonie de remise des prix.</p>
 
-                <p class="col-md-12">Clôture des inscriptions le mercredi 7 Décembre</p>
-
                 <p class="col-md-12">Une participation de 25€ par participant.e sera demandée au début de l'événement. Cette participation nous aidera à couvrir les frais de l'événement et n'aura aucun but lucratif (c'est pour la location de la salle, les différents repas, le buffet de clôture et le café... beaucoup de café). FACE Rennes contribue majoritairement aux coûts de l'événement.</p> 
             </article>
             <article class="col-md-12">
@@ -243,7 +241,7 @@
                     foreach ($tabcompteur as $key => $value) {
                         echo "<div class='col-md-10 col-md-offset-1 participant'>";
                         echo "<p class='col-md-12'>";
-                        echo  $tabmax[$key]-$value, " - ",$key;
+                        echo  $tabmax[$key]-$value,"/", $tabmax[$key], " - ",$key;
                         echo "</p>";
                         echo "</div>";
                     }
