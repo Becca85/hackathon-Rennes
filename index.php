@@ -241,7 +241,7 @@
                     foreach ($tabcompteur as $key => $value) {
                         echo "<div class='col-md-10 col-md-offset-1 participant'>";
                         echo "<p class='col-md-12'>";
-                        echo  $tabmax[$key]-$value,"/", $tabmax[$key], " - ",$key;
+                        echo  $value,"/", $tabmax[$key], " - ",$key;
                         echo "</p>";
                         echo "</div>";
                     }
