@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Base styles: opinionated defaults
+   Base styles: opinionated defaults (vendors)
    ========================================================================== */
 
 html {
@@ -7,7 +7,6 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
-
 
 /*
  * Remove text-shadow in selection highlight:
@@ -25,47 +24,16 @@ html {
     text-shadow: none;
 }
 
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
 iframe,
-img,
-svg,
-video {
+img {
     vertical-align: middle;
 }
-
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
 
 /*
  * Allow only vertical resizing of textareas.
@@ -87,132 +55,195 @@ textarea {
     padding: 0.2em 0;
 }
 
-
 /* ==========================================================================
-   LISE POIRIER - REBECCA MACCIO - RONALD MARCEL - LATIFA BOUMIZY
+   Here start out CSS
    ========================================================================== */
 
+/* Reseting bootstrap default proprietes */
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-
-/* SEPARATOR DIV */
-
-.line-separator {
-    display: block;
-    width: 50%;
-    height: 1px;
-    text-align: center;
-    border-bottom: 1px solid grey;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.container-fluid {
+    padding:0;
 }
 
-.line-separator2 {
-    display: block;
-    width: 50%;
-    height: 1px;
-    text-align: center;
-    border-bottom: 1px solid whitesmoke;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
 }
 
-.separator-present {
-    height: 1px;
-    background-color: #333;
-    width: 300px;
-    margin-bottom: 20px;
-    margin-left: 18px;
+*:focus {
+    outline: 0;
 }
 
+a {
+    cursor: pointer;
+}
 
-/* First Wrap Background */
+/* CSS for error/info message */
 
-.first-wrap {
-    height: 100%;
+.infoMessages {
+    height: 7.5vh;
     width: 100%;
-    background: url("../img/MG_2088.png");
-    background-size: cover;
-    background-position: bottom;
+    color: white;
+    padding-left: 15vw;
+    font-size: 1.3em;
+    font-size-adjust: 0.5;
 }
 
-.first-div {
-    position: relative;
+.infoMessages p{
+    padding-top: 2vh;
+    display:inline-block;
+}
+
+.validate {
+    background-color: #00D136;
+}
+
+.error {
+    background-color: #FF1923;
+}
+
+.sign {
+    margin-right: 1vw;
+    font-size: 1.1em;
+}
+
+.ok-button {
+    border: 1px solid white;
+    text-align:right;
+    margin-right: 20vw;
+    margin-top: 1vh;
+    padding: 0.5vh;
+    border-radius: 10%;
+    cursor: pointer;
+    float:right;
+    display:inline-block;
+}
+
+div.error div.ok-button:hover {
+    color:  #FF1923;
+    background-color: white;
+}
+
+div.validate div.ok-button:hover {
+    color:  #00D136;
+    background-color: white;
+}
+
+/* Home section */
+
+
+.home {
     height: 100vh;
-    background-color: transparent;
+    width: 100%;
+    padding-top: 30vh; /*for the text position*/
 }
 
-.first-inner-div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.home_container {
+    margin: auto;
+    width: 41%;
+    height: 40%;
     text-align: center;
     color: #fff;
-    font-size: 20px;
 }
 
-.first-inner-div h1 {
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+.home_container h1 {
+    margin-top:0;
+    padding: 20px 40px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.9);
-    font-family: 'Audiowide', cursive;
-    color: white;
-    font-size: 15px;
+    font-family: 'ONRAMP', cursive;
+    font-size: 1.5em;
 }
 
-.first-inner-div h1:hover {
-    background-color: white;
-    color: #222 !important;
-    font-family: 'Audiowide', cursive;
-}
 
-.section-present {
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
+/* CSS des articles */
 
-.block {
+
+article {
     background-color: whitesmoke;
     color: #222;
 }
 
-.block:hover {
+article:hover {
     background-color: #222;
-    color: white;
+    color: whitesmoke;
 }
 
-.block h2 {
-    font-family: 'Audiowide', cursive;
-    font-weight: 400;
-    font-size: 1.1em;
+article h2 {
+    font-family: 'ONRAMP', cursive;
+    font-size: 1.6em;
     margin-top: 30px;
     text-transform: uppercase;
 }
 
-.block h3 {
+article h3 {
     font-size: 1.2em;
     text-transform: uppercase;
     margin-top: 0px;
 }
 
-.block p {
+article p {
     text-align: justify;
     margin-bottom: 30px;
+    font-size: 1em;
+}
+
+article img {
+    margin: 10px auto 30px auto;
+    display: block;
+    max-height: 10vh;
+    max-width: 70%;
+    width: auto;
+    height: auto;
+}
+
+article.partenaire:hover {/* avoid negative form of logo*/
+    background-color: whitesmoke;
+    color: #222;
+}
+
+/* Style des sections*/
+
+.section_title {
+    padding : 0 4vh 0 3vh;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 1.6em;
+    font-family: 'ONRAMP', cursive;
+}
+
+section {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.pres_line {
+    height: 1px;
+    background-color: #333;
+    margin-bottom: 20px;
+    margin-left: 18px;
+}
+
+.column {
+    margin-top: 2%;
+}
+
+.line {
+    width: 50%;
+    height: 1px;
+    background-color: grey;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .participant {
     margin-bottom: 20px;
     background-color: #222;
-    color: white;
     text-align: center;
     border: 1px solid whitesmoke;
 }
@@ -221,168 +252,171 @@ textarea {
     color: white;
     padding: 10px;
     margin: 0px;
-    text-align: center;
     text-transform: uppercase;
     font-size: 1.2em;
-    cursor: pointer;
 }
 
-.block img {
-    margin-top: 10px;
-    margin-bottom: 30px;
+.partenaire {
+    overflow: hidden;
 }
 
-.partenaire1:hover {
+.contact {
+    height: 100vh;
+}
+
+.lieux { 
+    height: 95vh;
+}
+
+.map {
+    display: block;
+    margin: 5vh auto;
+    padding-top: 5vh;
+    height:70vh;
+    width: 75%;
+    opacity: 0.9;
+}
+
+footer {
+    height: 10vh;
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+footer p {
+    margin-bottom: 0px;
+}
+
+
+/* Modal CSS */
+
+.mentionsLegales {
+    font-size: 1em;
+    position: fixed;
+    top: 4em;
+    z-index: 10;
+    width: 50vw;
+    height: 80vh;
+    margin: 0 25vw;
     background-color: whitesmoke;
-    color: #222;
+    color: black;  
+    overflow: scroll;
+    display:none;
 }
 
+.mentionsLegales p {
+    padding-left: 6vw;
+    color: black;
+}
 
-/* Third Wrap Background */
+.mentionsLegales h2 {
+    color: black;
+    padding-left: 1vw;
+}
 
-.third-wrap {
-    background: #ffffff url("../img/header.png") no-repeat fixed;
+.modalTitle {
+    height: 10%;
+    width: 100%;
+    background-color: white; 
+    text-align: center;
+    font-size: 2em;
+}
+
+.modalClose {
+    cursor: pointer;
+    font-size: 0.9em;
+    float:right;
+    padding-right: 1vw;
+    padding-top: 1vh;
+}
+
+#modal-btn:hover{
+    color: grey;
+    cursor:pointer;
+}
+
+/* backgrounds */
+
+.background {
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     background-color: #222;
     width: 100%;
 }
 
-.third-wrap h2 {
-    padding-left: 40px;
-    padding-right: 40px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: whitesmoke;
-    font-size: 15px;
-    font-family: 'Audiowide', cursive;
+.background_home {
+    background-image: url("../img/MG_2088.png");
 }
 
-.fourth-div {
-    display: table;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding-left: 30px;
+.background_pres {
+    background-image: url("../img/presentation.png");
 }
 
-.six-wrap {
-    display: table;
-    height: 70vh;
-    background-color: transparent;
-    padding-left: 0px;
-    padding-right: 0px;
+.background_lieux {
+    background-image: url("../img/clavier.jpg");
 }
 
-.six-wrap h2 {
-    padding-left: 40px;
-    padding-right: 40px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: whitesmoke;
-    font-size: 15px;
-    font-family: 'Audiowide', cursive;
-}
+/* The code below is the design for the contact form */
 
-.eight-div {
-    display: table;
-    height: 70vh;
-    background: #ffffff url("../img/clavier.jpg") no-repeat fixed;
-    background-color: transparent!;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.adptmap {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 75%;
-    filter: saturate(0);
-    opacity: 0.9;
-    margin-bottom: 100px;
-}
-
-
-/*formulaire de contact*/
-
-*:focus {
-    outline: 0;
-}
-
-
-/* Below is the design for the contact form */
-
-#contact-wrap {
-    font-family: 'Lato Light', calibri, arial;
-    font-size: 16px;
-    font-weight: 300;
+.contact-area {
+    padding-top: 5%;
     width: 100%;
+    margin: 0 auto;
+
     color: #fff;
-    overflow: auto;
-    float: left;
-    margin: 0 auto;
+    font-family: 'Lato Light', calibri, arial;
+    font-size: 15px;
+    font-weight: 300;  
 }
 
-#contact-area {
-    margin-left: 3px;
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-#contact-area input,
-#contact-area textarea {
+.contact-area input,
+.contact-area select,
+.contact-area textarea {
     padding: 5px;
     width: 100%;
-    font-family: 'Lato Light', calibri, arial;
-    color: whitesmoke;
     background-color: transparent;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid transparent;
-    margin-bottom: 15px;
+    border-style : solid transparent;
+    border-width: 0 0 1px 0;
+    margin-bottom: 1.5%;
+
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
 }
 
-#contact-area textarea {
+.contact-area textarea {
     height: 150px;
-    background-color: transparent;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid transparent;
 }
 
-#contact-area textarea:focus,
-#contact-area input:focus {
+.contact-area textarea:focus,
+.contact-area input:focus {
     background-color: whitesmoke;
     color: #222;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid transparent;
 }
 
-#contact-area input.submit-button {
-    font-family: 'Lato Black', calibri, arial;
-    font-size: 15px;
+.contact-area input.submit-button {
     text-transform: uppercase;
-    width: 100px;
-    float: left;
+    height: 5vh;
+    margin-top: 1%;
+    color: whitesmoke;
+   
     background-color: transparent;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
-    -moz-transition: all 0.1s ease-in-out;
-    -webkit-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-    float: right;
+    border : 1px solid #fff;
+
     font-weight: bold;
 }
 
-#contact-area input.submit-button:hover {
+.contact-area input.submit-button:hover {
     color: #222;
     background-color: whitesmoke;
 }
@@ -410,238 +444,90 @@ textarea {
 }
 
 select {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 100%;
-    font-size: 15px;
     font-weight: 600;
     color: #8E8E8F;
-    ;
-    background-color: transparent;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid transparent;
-    margin-bottom: 15px;
 }
 
 option {
-    background-color: #333;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: transparent;
+    background-color: #fff;
 }
 
 
-/* pour enlever le trait sous te texte en hover*/
-
-a:hover {
-    text-decoration: none;
-}
-
-footer {
-    height: 75px;
-    width: 100%;
-    background-color: #222;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: whitesmoke;
-    text-transform: uppercase;
-}
-
-footer p {
-    margin-bottom: 0px;
-}
-
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #222 !important;
-        /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: none;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-    a[href^=""]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    img {
-        max-width: 100% !important;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
-
-/* ##################################################################### */
-
-
-/* ############################   TABLETS   ############################ */
-
-
-/* ##################################################################### */
-
+/* ############################   RESPONSIVE   ######################### */
 
 /* Small devices (tablets, 768px and up) */
 
-@media (max-width: 1050px) {
+@media (max-width: 1025px) {
     [class*="col-"] {
-        padding-right: 0px;
-        padding-left: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
-    
-    .separator-present {
+
+    .home {
+        padding-top: 7em;
+    }
+
+    .infoMessages {
+        font-size: 0.8em;
+        padding-left: 5vw;
+    }
+
+    .ok-button {
+        margin-right: 10vw;
+        margin-top: 1.5vh;
+    }
+
+    .mentionsLegales {
+        width: 80vw;
+        margin: 0 10vw;
+    }
+
+    .mentionsLegales h2 {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+    .home_container {
+        width: 60%;
+    }
+
+    .pres_line {        
         display: none;
     }
-    
-    .section-present {
-        margin-top: 0px;
-        margin-bottom: 0px;
+
+    article {
+        margin-bottom: 20%;
+        padding: 7% 0%;
     }
-    
-    .block h2 {
-        margin-top: 0px;
-        padding-top: 40px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 10px;
-    }
-    
-    .section-present p {
-        padding-left: 40px;
-        padding-right: 40px;
-        margin-bottom: 0px;
-    }
-    
-    .section-present h3 {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 20px;
-        margin-bottom: 5px;
-    }
-    
-    .block {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-bottom: 40px;
-    }
-    
-    .participant {
-        width: 50%;
-        margin: 0 auto;
-        margin-top: 10px;
-    }
-    
-    .participant p {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    
-    .partenaire {
-    padding-left: 25px !important;
-    padding-right: 25px !important;
-}
-    
-    .fourth-div {
-        width: 100%;
-    }
-    
-    .six-wrap {
-        width: 100%;
-    }
-    
-    .eight-div {
-        width: 100%;
-    }
-    
-     .adptmap {
-        display: block;
-        margin: 0 auto;
-        width: 85%;
-        margin-top: 30px;
-         height: 300px;
-         padding-bottom: 50px;
-    }
-    
-    iframe {
-        border: 0px !important;
-    }
-    
-    footer {
-        margin-top: 0px;
-    }
-    
-    footer p {
-        padding-left: 40px;
-        padding-right: 40px;
+
+    article h2 {
         text-align: center;
+        margin: 0 0 5% 0;
+    }
+
+    footer {
+        margin-top: 0;
+        text-align: center;
+    }
+   
+}
+
+@media (min-width: 426px) and (max-width: 1025px) {
+
+    article {
+        margin-bottom: 10%;
+    }
+
+    article.partenaire div.col-md-6 {
+        padding-left: 7%;
+    }
+}
+
+@media (min-width: 1320px) {
+    .infoMessages {
+        height: 5vh;
+        padding-top: 0;
+    }
+    .ok-button {
+        padding: 0.5vh;
     }
 }
