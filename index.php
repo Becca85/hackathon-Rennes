@@ -76,7 +76,7 @@
     */
     function select(PDO $connexion){
         $requete=$connexion->prepare("
-            SELECT * FROM Inscrits");
+            SELECT * FROM hackathon_inscrits");
         $requete->execute();
         $resultat=$requete->fetchall();     
         return $resultat;
@@ -119,7 +119,7 @@
                            
 
                             if ($tabmax[$metier]>$tabcompteur[$metier]){
-                            $sql = "INSERT INTO Inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
+                            $sql = "INSERT INTO hackathon_inscrits(nom, prenom, email, metier, message) VALUES (:nom,:prenom,:email,:metier,:message)";
                             // Envoi des données
                             $requete2= $connexion->prepare($sql);
                             $params = array('nom'=>$nom, 'prenom'=>$prenom, 'email'=>$email, 'metier'=>$metier, 'message'=>$message);
@@ -235,7 +235,7 @@
         <!-- Colonne du nombre de participant et du planning -->
         <div class="col-md-5 column">
             <article class="col-md-12">
-                <h2 class="col-md-12">{ Nombre de places disponibles : <?= array_sum($tabmax)-  array_sum($tabcompteur); ?> }</h2>
+                <h2 class="col-md-12">{ Nombre de places disponibles : <?= array_sum($tabmax)-  array_sum($tabcompteur); ?> /50 }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1 "></div>
                 <?php
                     foreach ($tabcompteur as $key => $value) {
@@ -267,6 +267,7 @@
                 <h2 class="col-md-12">{ Partenaires }</h2>
                 <div class="pres_line col-md-8 col-md-offset-1"></div>
                 <div class="col-md-6 col-xs-6 col-sm-6">
+                    <img class="img-responsive" src="img/ref_esc.png" alt="ESC School of Business">
                     <img class="img-responsive" src="img/face.png" alt="Association FACE RENNES">
                     <img class="img-responsive" src="img/loft.png" alt="Le loft, espace de coworking">
                     <img class="img-responsive" src="img/logo_RennesMetropole.png" alt="Rennes Métropôle">
